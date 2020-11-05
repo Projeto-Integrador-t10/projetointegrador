@@ -20,19 +20,13 @@ public class Categoria {
 	private String nome;
 	
 	@NotNull
-	private boolean ativo;
-	
-	@NotNull
-	@Size(min = 1, max = 200)
-	private String produtor;
+	private boolean ativo;	
 	
 	public long getId() {return id;}
 	public void setId(long id) {this.id = id;}
 	public String getNome() {return nome;}
 	public void setNome(String nome) {this.nome = nome;}
 	public boolean isAtivo() {return ativo;}
-	public void setAtivo(boolean ativo) {this.ativo = ativo;}
-	public String getProdutor() {return produtor;}
-	public void setProdutor(String porduto) {this.produtor = produtor;}	
+	public void setAtivo(boolean ativo) {this.ativo = ativo;}		
 	
 }
