@@ -1,6 +1,5 @@
 package com.vendaverde.controller;
 
-
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,8 +28,12 @@ public class UsuarioController {
 	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
-		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.CadastrarUsuario(usuario));
-	}
-	
+		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuario);
+		try {
+			return ResponseEntity.ok(user.get());
+		} catch(Exception e){
+			return ResponseEntity.badRequest().build();
+		}
+	}	
 }
 
