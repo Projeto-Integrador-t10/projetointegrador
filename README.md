@@ -5,7 +5,8 @@
 
 Obs: Necessário criar login e senha.  
 
-Post -> http://localhost:8080/usuarios/cadastrar  
+Post -> http://localhost:8080/usuarios/cadastrar  (vendaverde_1.0.5)  
+Post -> http://localhost:9000/usuarios/cadastrar  (vendaverde-deploy)  
 
 Parâmetros via Body:  
 {  
