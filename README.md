@@ -1,5 +1,9 @@
 - 🌱 Projeto VendaVerde.com 
 
+
+![vv](https://user-images.githubusercontent.com/52088299/100022743-7aad1180-2dc2-11eb-8e1e-2c730d62102c.jpeg)
+
+
       - 👯 Equipe: 
 - 🤝 Bárbara Elizabeth de Moraes Cândido 
 - 🤝 Diana Coelho de Souza 
