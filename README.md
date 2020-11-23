@@ -13,7 +13,7 @@
 
 - 📝 [A ideia:] Uma rede de e-commerce para conectar pequenos produtores e trabalhadores de reservas extrativistas a consumidores da região em que atuam, com objetivo de fortalecer o consumo local e a produção agrícola responsável e sustentável.
 
-⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡
+⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡
 
 <h3 align="left">Tecnologias Usadas: </h3>
 
