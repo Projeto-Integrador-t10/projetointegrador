@@ -5,12 +5,11 @@
 
 
       - 👯 Equipe: 
-- 🤝 <a href="https://github.com/BarbaraEMCandido">Bárbara Elizabeth de Moraes Cândido</a>
-
-- 🤝 <a href="https://github.com/coelhodiana" target="_blank">Diana Coelho de Souza</a>
-- 🤝 <a href="https://github.com/mastruzz" target="_blank">Mateus Oliveira de Macedo</a>
-- 🤝 <a href="https://github.com/PauloNegri" target="_blank">Paulo Cesar Negri</a> 
-- 🤝 <a href="https://github.com/Rafyy2102i" target="_blank">Rafaela dos Santos Silva</a>
+- 🤝 <a href="https://github.com/BarbaraEMCandido"  target="_blank">Bárbara Elizabeth de Moraes Cândido</a>
+- 🤝 <a href="https://github.com/coelhodiana"  target="_blank">Diana Coelho de Souza</a>
+- 🤝 <a href="https://github.com/mastruzz"  target="_blank">Mateus Oliveira de Macedo</a>
+- 🤝 <a href="https://github.com/PauloNegri"  target="_blank">Paulo Cesar Negri</a> 
+- 🤝 <a href="https://github.com/Rafyy2102i"  target="_blank">Rafaela dos Santos Silva</a>
 
 
 
