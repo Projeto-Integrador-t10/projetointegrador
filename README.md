@@ -5,11 +5,12 @@
 
 
       - 👯 Equipe: 
-- 🤝 Bárbara Elizabeth de Moraes Cândido 
-- 🤝 Diana Coelho de Souza 
-- 🤝 Mateus Oliveira de Macedo 
-- 🤝 Paulo Cesar Negri 
-- 🤝 Rafaela dos Santos
+- 🤝 <a href="https://github.com/BarbaraEMCandido">Bárbara Elizabeth de Moraes Cândido</a>
+
+- 🤝 <a href="https://github.com/coelhodiana">Diana Coelho de Souza</a>
+- 🤝 <a href="https://github.com/mastruzz">Mateus Oliveira de Macedo</a>
+- 🤝 <a href="https://github.com/PauloNegri">Paulo Cesar Negri</a> 
+- 🤝 <a href="https://github.com/Rafyy2102i">Rafaela dos Santos Silva</a>
 
 
 
