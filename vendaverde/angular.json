@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "vendaverde"
+  "defaultProject": "vendaverde",
+  "cli": {
+    "analytics": "470e82a1-36e3-4557-9b53-0b0fe7804e11"
+  }
 }
