@@ -4,5 +4,5 @@ export class Produto {
     public preco: number
     public quantidade: number
     public estoque: boolean
-    public docao: string
+    public doacao: string
 }
