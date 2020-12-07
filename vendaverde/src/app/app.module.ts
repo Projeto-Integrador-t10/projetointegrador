@@ -12,7 +12,9 @@ import { SobreComponent } from './sobre/sobre.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
+ 
 @NgModule({
   declarations: [
     AppComponent,
