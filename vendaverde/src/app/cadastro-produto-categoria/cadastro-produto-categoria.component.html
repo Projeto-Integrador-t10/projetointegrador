@@ -1,1 +1,17 @@
-<p>cadastro-produto-categoria works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-5 mt-5 d-flex justify-content-center align-items-center">
+            <div class="card mb-5 mr-4 ml-4" style="width: 18rem;">  
+                <div class="card-body" *ngFor='let categoria of listaCategorias'>
+                    <h5 class="card-title"> {{ categoria.nome }}  </h5> 
+
+                    <p class="card-text">
+                        Código:
+                    </p> 
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
