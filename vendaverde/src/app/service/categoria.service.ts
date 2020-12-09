@@ -15,8 +15,11 @@ export class CategoriaService {
   }
 
   getAllCategorias(): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>('http://localhost:8080/categoria', this.token)
+    return this.http.get<Categoria[]>('http://localhost:9000/categoria', this.token)
   }
 
+  getByIdCategoria() {
+    
+  }
 
 }

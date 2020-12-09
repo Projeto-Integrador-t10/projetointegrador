@@ -36,6 +36,12 @@
 
         <div *ngIf='auth.btnSair()'>
           <li class="nav-item ml-3">
+            <a class="nav-link p-3" routerLink='/cadastrarproduto'>Cadastrar produto</a>
+          </li>
+        </div>
+
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item ml-3">
             <a class="nav-link p-3" (click)='sair()'>sair</a>
           </li>
         </div>
