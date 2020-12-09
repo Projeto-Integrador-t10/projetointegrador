@@ -46,11 +46,9 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
       this.produto = resp
+      console.log(this.produto)
       this.produto = new Produto()
     })
-
-    console.log(this.produto)
-
   }
 
 }
