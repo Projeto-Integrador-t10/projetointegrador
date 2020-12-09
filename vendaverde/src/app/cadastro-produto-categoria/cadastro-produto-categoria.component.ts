@@ -28,6 +28,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     window.scroll(0, 0)
     this.findAllCategorias()
     this.findByIdCategoria()
+    this.findAllProdutos()
   }
   
   cadastrar() {
@@ -66,10 +67,10 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     }
   }
 
-  getAllProdutos() {
+ findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
-      console.log("Lista de categorias" + JSON.stringify(this.listaCategorias))
+      console.log(this.listaProdutos)
     })
   }
 
