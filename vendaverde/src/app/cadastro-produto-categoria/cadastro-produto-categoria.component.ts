@@ -29,6 +29,17 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     this.findAllCategorias()
     this.findByIdCategoria()
   }
+  
+  cadastrar() {
+    if (this.categoria.nome == null) {
+      alert('Preencha o campo "Descrição" corretamente')
+    } else {
+      this.categoriaService.postCategoria(this.categoria).subscribe((resp: any = Categoria) => {
+        this.categoria = resp
+        alert('Categoria cadastrado com sucesso!')
+      })
+    }
+  } 
 
   findAllCategorias() {
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
@@ -41,13 +52,24 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
       this.categoria = resp;
     })
   }
+
   salvarProduto() {
     this.categoria.id = this.idCategoria
 
-    this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
-      this.produto = resp
-      console.log(this.produto)
-      this.produto = new Produto()
+    if(this.produto.nome == null || this.produto.preco == null || this.produto.quantidade == null || this.produto.estoque == null) {
+      alert("Preencha todos os campos")
+    } else {
+      this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
+        this.produto = resp
+        this.produto = new Produto()
+      })
+    }
+  }
+
+  getAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+      console.log("Lista de categorias" + JSON.stringify(this.listaCategorias))
     })
   }
 

@@ -22,4 +22,8 @@ export class CategoriaService {
     return this.http.get<Categoria>(`http://localhost:9000/categoria/${id}`, this.token)
   }
 
+  postCategoria(categoria: Categoria) {
+    return this.http.post('http://localhost:9000/categoria', categoria, this.token)
+  }
+
 }

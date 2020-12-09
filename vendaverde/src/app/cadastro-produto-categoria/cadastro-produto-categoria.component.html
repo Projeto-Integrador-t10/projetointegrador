@@ -24,7 +24,7 @@
 
     <div class="form-group my-3">
         <label class="" for="tema">Escolha uma categoria</label>
-        <select name="categoria" id='categoria' class="form-control" [(ngModel)]="idCategoria"
+        <select name="categoria" id='categoria' class="form-control" [(ngModel)]="idCategoria" 
             (change)='findAllCategorias()'>
             <option *ngFor='let item of listaCategorias' value={{item.id}}>
                 {{item.nome}}
@@ -43,7 +43,7 @@
         <label class="" for="nome">Criar nova categoria</label>
         <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome" placeholder="Digite aqui o nome da nova categoria">
         <div class="form-group d-flex justify-content-end">
-            <button type="button" class="btn btn-info my-3" >Salvar categoria</button>
+            <button type="button" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
         </div>
     </div>
 
