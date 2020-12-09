@@ -12,6 +12,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/cadastro-produto-categoria.component';
 
  
 @NgModule({
@@ -22,7 +23,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     HomeComponent,
     SobreComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    CadastroProdutoCategoriaComponent
   ],
   imports: [
     BrowserModule,
