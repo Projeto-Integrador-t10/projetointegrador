@@ -11,8 +11,6 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./cadastro-produto-categoria.component.css']
 })
 export class CadastroProdutoCategoriaComponent implements OnInit {
-
-
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
@@ -28,7 +26,6 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0)
-
     this.findAllCategorias()
     this.findByIdCategoria()
   }
@@ -43,8 +40,8 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: any = Categoria) => {
       this.categoria = resp;
     })
-    
-      salvarProduto() {
+  }
+  salvarProduto() {
     this.categoria.id = this.idCategoria
 
     this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
