@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
 
 @Component({
   selector: 'app-cadastro-produto-categoria',
@@ -10,12 +12,17 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class CadastroProdutoCategoriaComponent implements OnInit {
 
+
+  produto: Produto = new Produto()
+  listaProdutos: Produto[]
+
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
 
   constructor(
     private categoriaService: CategoriaService,
+    private produtoService: ProdutoService,
     private router: Router
   ) { }
 
@@ -36,6 +43,16 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: any = Categoria) => {
       this.categoria = resp;
     })
+    
+      salvarProduto() {
+    this.categoria.id = this.idCategoria
+
+    this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
+      this.produto = resp
+      this.produto = new Produto()
+    })
+
   }
+
 
 }

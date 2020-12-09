@@ -1,6 +1,37 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 mb-5 mt-5 d-flex justify-content-center align-items-center">
+<div class="container my-5">
+
+    <h3 class="text-center mb-4">Cadastre um produto</h3>
+
+    <div class="form-group">
+        <label class="" for="titulo">Nome do produto:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto"
+            [(ngModel)]='produto.nome'>
+    </div>
+
+    <div class="form-group">
+        <label class="" for="titulo">Preço:</label>
+        <input type="number" class="form-control" id="preco" placeholder="Digite aqui o preço do produto"
+            [(ngModel)]='produto.preco'>
+    </div>
+
+    <div class="form-group">
+        <label class="" for="titulo">Quantidade:</label>
+        <input type="number" class="form-control" id="quantidade" placeholder="Digite aqui o preço do produto"
+            [(ngModel)]='produto.quantidade'>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="estoque">
+        <label class="form-check-label" for="">Produto em estoque</label>
+    </div>
+
+    <div class="form-group">
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Selecione a Categoria do produto</label>
+        <select name="categoria" id="categoria" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]='idCategoria'>
+          <option *ngFor='let item of listaCategorias' value{{item.id}}>{{item.nome}}</option>
+        </select>
+      
+              <div class="col-md-12 mb-5 mt-5 d-flex justify-content-center align-items-center">
             <div class="card mb-5 mr-4 ml-4" style="width: 18rem;">  
                 <div class="card-body" *ngFor='let categoria of listaCategorias'>
                     <h5 class="card-title"> {{ categoria.nome }}  </h5> 
@@ -12,6 +43,10 @@
                    
                 </div>
             </div>
-        </div>
+        
+    </div>
+
+    <div class="form-group d-flex justify-content-end">
+        <button type="button" class="btn btn-info" (click)='salvarProduto()'>Salvar produto</button>
     </div>
 </div>
