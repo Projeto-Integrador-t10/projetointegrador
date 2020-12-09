@@ -29,10 +29,11 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
   salvarProduto() {
     this.categoria.id = this.idCategoria
 
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+    this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
       this.produto = resp
       this.produto = new Produto()
     })
+    console.log(this.produto)
   }
 
 /*   findByIdCategoria() {
