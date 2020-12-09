@@ -49,7 +49,8 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
       this.produto = new Produto()
     })
 
-  }
+    console.log(this.produto)
 
+  }
 
 }

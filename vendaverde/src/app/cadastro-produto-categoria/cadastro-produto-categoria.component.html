@@ -3,8 +3,8 @@
     <h3 class="text-center mb-4">Cadastre um produto</h3>
 
     <div class="form-group">
-        <label class="" for="titulo">Nome do produto:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto">
+        <label class="" for="nome">Nome do produto:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto" [(ngModel)]='produto.nome'>
     </div>
 
     <div class="form-group">
@@ -34,5 +34,13 @@
 
     <div class="form-group d-flex justify-content-end">
         <button type="button" class="btn btn-info" (click)='salvarProduto()'>Salvar produto</button>
+    </div>
+
+<hr class="my-3"> 
+
+    <div class="form-group">
+        <label class="" for="titulo">Criar nova categoria</label>
+        <input type="number" class="form-control" id="categoria" [(ngModel)]="idCategoria" placeholder="Digite aqui o nome da nova categoria">
+        <button type="button" class="btn btn-info my-3" >Salvar categoria</button>
     </div>
 </div>
