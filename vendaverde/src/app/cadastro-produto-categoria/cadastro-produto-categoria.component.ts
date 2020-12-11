@@ -13,7 +13,7 @@ import { ProdutoService } from '../service/produto.service';
 export class CadastroProdutoCategoriaComponent implements OnInit {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
-
+  
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
@@ -73,5 +73,4 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
       console.log(this.listaProdutos)
     })
   }
-
 }

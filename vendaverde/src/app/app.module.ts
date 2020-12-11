@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/cadastro-produto-categoria.component';
+import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 
  
 @NgModule({
@@ -24,7 +25,8 @@ import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/
     SobreComponent,
     LoginComponent,
     CadastroComponent,
-    CadastroProdutoCategoriaComponent
+    CadastroProdutoCategoriaComponent,
+    DeleteProdutosComponent
   ],
   imports: [
     BrowserModule,
