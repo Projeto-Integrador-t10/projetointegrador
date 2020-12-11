@@ -61,10 +61,14 @@
                     <td>{{item.nome}}</td>
                     <td>{{item.quantidade}}</td>
                     <td>{{item.preco | currency:'BRL' }}</td>
+                    <div class="col-md-5 d-flex justify-content-end">
+                    <button class="mr-3 btn btn-outline-danger" [routerLink]="['/delete-produto', item.id]">
+                        Delete
+                    </button>
+                    </div>
                 </tr>
             </tbody>
         </table>
-
     </div>
 </div>
 
