@@ -61,12 +61,15 @@
                     <td>{{item.nome}}</td>
                     <td>{{item.quantidade}}</td>
                     <td>{{item.preco | currency:'BRL' }}</td>
+                    <button class="btn btn-outline-success mt-2" [routerLink]="['/editar-produto', item.id]" >Editar</button>
                 </tr>
             </tbody>
         </table>
 
     </div>
 </div>
+
+<!-- Criar Categoria nova -->
 
 <hr class="my-3">
 

@@ -5,13 +5,15 @@ import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/cadastro-produto-categoria.component';
+import { PutProdutosComponent } from './put-produtos/put-produtos.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: 'home', component: HomeComponent},
   {path: 'sobre', component: SobreComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
-  {path: 'cadastro-produto', component: CadastroProdutoCategoriaComponent}
+  {path: 'cadastro-produto', component: CadastroProdutoCategoriaComponent},
+  {path: 'editar-produto/:id', component: PutProdutosComponent}
 ];
 
 @NgModule({
