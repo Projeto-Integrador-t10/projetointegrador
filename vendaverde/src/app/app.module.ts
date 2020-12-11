@@ -17,6 +17,7 @@ import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
  
@@ -30,10 +31,9 @@ import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.compo
     LoginComponent,
     CadastroComponent,
     CadastroProdutoCategoriaComponent,
-
-    PutCategoriaComponent
-
-    DeleteProdutosComponent
+    PutCategoriaComponent,
+    DeleteProdutosComponent,
+    DeleteCategoriaComponent
 
   ],
   imports: [

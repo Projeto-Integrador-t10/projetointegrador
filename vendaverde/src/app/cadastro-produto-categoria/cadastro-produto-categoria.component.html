@@ -55,12 +55,12 @@
                     <th scope="col">Preço</th>
                 </tr>
             </thead>
-            <tbody *ngFor='let item of listaProdutos'>
+            <tbody *ngFor='let produto of listaProdutos'>
                 <tr>
-                    <th>{{item.id}}</th>
-                    <td>{{item.nome}}</td>
-                    <td>{{item.quantidade}}</td>
-                    <td>{{item.preco | currency:'BRL' }}</td>
+                    <th>{{produto.id}}</th>
+                    <td>{{produto.nome}}</td>
+                    <td>{{produto.quantidade}}</td>
+                    <td>{{produto.preco | currency:'BRL' }}</td>
                 </tr>
             </tbody>
         </table>
@@ -101,10 +101,22 @@
                 <tr>
                     <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
+                    <div class="col-md-4 d-flex justify-content-end">
+
+                        <button class="mr-3 btn btn-outline-info" [routerLink] = "['/editar-categoria', categoria.id]">
+                            Editar
+                        </button>
+            
+                        <button class="btn btn-outline-danger ml-3" [routerLink] = "['/delete-categoria', categoria.id]">
+                            Apagar
+                        </button>
+                     </div>
                     
                 </tr>
             </tbody>
+            
         </table>
+        
 
     </div>
 </div>

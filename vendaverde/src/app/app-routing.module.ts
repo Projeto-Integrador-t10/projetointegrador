@@ -9,6 +9,7 @@ import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
@@ -17,10 +18,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'cadastro-produto', component: CadastroProdutoCategoriaComponent},
-
-  {path: 'editar-categoria/:id', component: PutCategoriaComponent}
-
-  {path: 'delete-produto/:id', component: DeleteProdutosComponent}
+  {path: 'editar-categoria/:id', component: PutCategoriaComponent},
+  {path: 'delete-produto/:id', component: DeleteProdutosComponent},
+  {path: 'delete-categoria/:id', component: DeleteCategoriaComponent}
 
 ];
 
