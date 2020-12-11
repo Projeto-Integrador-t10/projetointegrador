@@ -71,7 +71,7 @@
 <hr class="my-3">
 
 <div class="container my-5">
-    <h2 class="my-5">Criar nova categoria</h2>
+    <h2 class="my-5">Cadastre uma categoria</h2>
     <div class="form-group">
         <label class="" for="nome">Nome da categoria</label>
         <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
@@ -84,3 +84,27 @@
 </div>
 
 <hr class="my-3">
+
+<!-- Listar produtos cadastrados -->
+<div class="container my-5">
+    <h2 class="my-5">Categorias Cadastradas</h2>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nome da categoria</th>
+                    
+                </tr>
+            </thead>
+            <tbody *ngFor='let categoria of listaCategorias'>
+                <tr>
+                    <th>{{categoria.id}}</th>
+                    <td>{{categoria.nome}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
