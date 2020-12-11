@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -26,6 +27,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0)
+
     this.findAllCategorias()
     this.findByIdCategoria()
     this.findAllProdutos()
@@ -42,7 +44,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     }
   } 
 
-  findAllCategorias() {
+  findAllCategorias()  {
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
       console.log("Lista de categorias" + JSON.stringify(this.listaCategorias))
