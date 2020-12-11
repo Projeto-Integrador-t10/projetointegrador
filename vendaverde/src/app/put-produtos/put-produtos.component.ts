@@ -57,6 +57,7 @@ export class PutProdutosComponent implements OnInit {
   salvarProduto() {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
+    
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.router.navigate(['/cadastro-produto'])

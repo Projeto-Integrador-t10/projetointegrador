@@ -56,13 +56,20 @@
                 </tr>
             </thead>
             <tbody *ngFor='let produto of listaProdutos'>
-                <tr>             
+                <tr>
 
                     <th>{{produto.id}}</th>
                     <td>{{produto.nome}}</td>
                     <td>{{produto.quantidade}}</td>
                     <td>{{produto.preco | currency:'BRL' }}</td>
-                   <button class="btn btn-outline-success mt-2" [routerLink]="['/editar-produto', item.id]" >Editar</button>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-outline-success mt-2"
+                            [routerLink]="['/editar-produto', produto.id]">Editar</button>
+                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-produto', produto.id]">
+                            Apagar
+                        </button>
+                    </div>
+
 
                 </tr>
             </tbody>
@@ -98,29 +105,29 @@
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Nome da categoria</th>
-                    
+
                 </tr>
             </thead>
             <tbody *ngFor='let categoria of listaCategorias'>
                 <tr>
                     <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
-                    <div class="col-md-4 d-flex justify-content-end">
+                    <div class="d-flex justify-content-end">
 
-                        <button class="mr-3 btn btn-outline-info" [routerLink] = "['/editar-categoria', categoria.id]">
+                        <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
                             Editar
                         </button>
-            
-                        <button class="btn btn-outline-danger ml-3" [routerLink] = "['/delete-categoria', categoria.id]">
+
+                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-categoria', categoria.id]">
                             Apagar
                         </button>
-                     </div>
-                    
+                    </div>
+
                 </tr>
             </tbody>
-            
+
         </table>
-        
+
 
     </div>
 </div>
