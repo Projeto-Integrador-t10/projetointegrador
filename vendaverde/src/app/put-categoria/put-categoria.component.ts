@@ -40,5 +40,4 @@ export class PutCategoriaComponent implements OnInit {
       alert('Tema atualizado com sucesso!')
     })
   }
-
 }

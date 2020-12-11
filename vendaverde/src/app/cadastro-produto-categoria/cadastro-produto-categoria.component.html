@@ -55,8 +55,9 @@
                     <th scope="col">Preço</th>
                 </tr>
             </thead>
-            <tbody *ngFor='let item of listaProdutos'>
+            <tbody *ngFor='let produto of listaProdutos'>
                 <tr>
+
                     <th>{{item.id}}</th>
                     <td>{{item.nome}}</td>
                     <td>{{item.quantidade}}</td>
@@ -64,13 +65,27 @@
                     <div class="col-md-5 d-flex justify-content-end">
                     <button class="mr-3 btn btn-outline-danger" [routerLink]="['/delete-produto', item.id]">
                         Delete
-                    </button>                    
+                    </button>  
+
+                    <th>{{produto.id}}</th>
+                    <td>{{produto.nome}}</td>
+                    <td>{{produto.quantidade}}</td>
+                    <td>{{produto.preco | currency:'BRL' }}</td>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-outline-success mt-2"
+                            [routerLink]="['/editar-produto', produto.id]">Editar</button>
+                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-produto', produto.id]">
+                            Apagar
+                        </button>
                     </div>
+
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+<!-- Criar Categoria nova -->
 
 <hr class="my-3">
 
@@ -98,16 +113,27 @@
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Nome da categoria</th>
-                    
+
                 </tr>
             </thead>
             <tbody *ngFor='let categoria of listaCategorias'>
                 <tr>
                     <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
-                    
+                    <div class="d-flex justify-content-end">
+
+                        <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
+                            Editar
+                        </button>
+
+                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-categoria', categoria.id]">
+                            Apagar
+                        </button>
+                    </div>
+
                 </tr>
             </tbody>
+
         </table>
 
     </div>
