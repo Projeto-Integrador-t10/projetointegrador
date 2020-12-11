@@ -55,17 +55,18 @@
                     <th scope="col">Preço</th>
                 </tr>
             </thead>
-            <tbody *ngFor='let item of listaProdutos'>
-                <tr>
-                    <th>{{item.id}}</th>
-                    <td>{{item.nome}}</td>
-                    <td>{{item.quantidade}}</td>
-                    <td>{{item.preco | currency:'BRL' }}</td>
-                    <button class="btn btn-outline-success mt-2" [routerLink]="['/editar-produto', item.id]" >Editar</button>
+            <tbody *ngFor='let produto of listaProdutos'>
+                <tr>             
+
+                    <th>{{produto.id}}</th>
+                    <td>{{produto.nome}}</td>
+                    <td>{{produto.quantidade}}</td>
+                    <td>{{produto.preco | currency:'BRL' }}</td>
+                   <button class="btn btn-outline-success mt-2" [routerLink]="['/editar-produto', item.id]" >Editar</button>
+
                 </tr>
             </tbody>
         </table>
-
     </div>
 </div>
 
@@ -74,7 +75,7 @@
 <hr class="my-3">
 
 <div class="container my-5">
-    <h2 class="my-5">Criar nova categoria</h2>
+    <h2 class="my-5">Cadastre uma categoria</h2>
     <div class="form-group">
         <label class="" for="nome">Nome da categoria</label>
         <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
@@ -87,3 +88,39 @@
 </div>
 
 <hr class="my-3">
+
+<!-- Listar produtos cadastrados -->
+<div class="container my-5">
+    <h2 class="my-5">Categorias Cadastradas</h2>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nome da categoria</th>
+                    
+                </tr>
+            </thead>
+            <tbody *ngFor='let categoria of listaCategorias'>
+                <tr>
+                    <th>{{categoria.id}}</th>
+                    <td>{{categoria.nome}}</td>
+                    <div class="col-md-4 d-flex justify-content-end">
+
+                        <button class="mr-3 btn btn-outline-info" [routerLink] = "['/editar-categoria', categoria.id]">
+                            Editar
+                        </button>
+            
+                        <button class="btn btn-outline-danger ml-3" [routerLink] = "['/delete-categoria', categoria.id]">
+                            Apagar
+                        </button>
+                     </div>
+                    
+                </tr>
+            </tbody>
+            
+        </table>
+        
+
+    </div>
+</div>

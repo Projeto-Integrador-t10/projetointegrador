@@ -16,6 +16,12 @@ import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/
 import { SearchComponent } from './search/search.component';
 import { PutProdutosComponent } from './put-produtos/put-produtos.component';
 
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+
+import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+
+
  
 @NgModule({
   declarations: [
@@ -28,7 +34,10 @@ import { PutProdutosComponent } from './put-produtos/put-produtos.component';
     CadastroComponent,
     CadastroProdutoCategoriaComponent,
     SearchComponent,
-    PutProdutosComponent
+    PutProdutosComponent,
+    PutCategoriaComponent,
+    DeleteProdutosComponent,
+    DeleteCategoriaComponent
   ],
   imports: [
     BrowserModule,

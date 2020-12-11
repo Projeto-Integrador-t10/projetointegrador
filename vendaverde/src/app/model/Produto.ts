@@ -1,4 +1,5 @@
 
+
 import { Categoria } from './Categoria'
 
 export class Produto {
@@ -9,4 +10,5 @@ export class Produto {
     public estoque: boolean
     public doacao: string
     public categoria: Categoria 
+
 }
