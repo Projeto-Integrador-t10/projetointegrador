@@ -11,6 +11,8 @@ import { ProdutoService } from '../service/produto.service';
 export class DeleteProdutosComponent implements OnInit {
 
   produto: Produto = new Produto() 
+
+  listaProdutos: Produto[]
  
 
   constructor(
@@ -24,6 +26,7 @@ export class DeleteProdutosComponent implements OnInit {
     window.scroll(0,0)
     let id: number = this.route.snapshot.params["id"]
     this.findByIdProduto(id)
+    this.findAllProdutos()
   }
 
   findByIdProduto(id: number){
@@ -36,10 +39,17 @@ export class DeleteProdutosComponent implements OnInit {
     this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
       this.router.navigate(['/cadastro-produto'])
       alert('Produto apagado com sucesso!!')
+      this.findAllProdutos()
     })
   }
 
   btnNao() {
     this.router.navigate(['/cadastro-produto'])
+  }
+
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp      
+    })
   }
 }

@@ -5,9 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/cadastro-produto-categoria.component';
-
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
-
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
