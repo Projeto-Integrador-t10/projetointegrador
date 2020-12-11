@@ -30,11 +30,8 @@ import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.compo
     LoginComponent,
     CadastroComponent,
     CadastroProdutoCategoriaComponent,
-
-    PutCategoriaComponent
-
+    PutCategoriaComponent,
     DeleteProdutosComponent
-
   ],
   imports: [
     BrowserModule,

@@ -5,9 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/cadastro-produto-categoria.component';
-
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
-
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 
 const routes: Routes = [
@@ -17,11 +15,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'cadastro-produto', component: CadastroProdutoCategoriaComponent},
-
-  {path: 'editar-categoria/:id', component: PutCategoriaComponent}
-
+  {path: 'editar-categoria/:id', component: PutCategoriaComponent},
   {path: 'delete-produto/:id', component: DeleteProdutosComponent}
-
 ];
 
 @NgModule({
