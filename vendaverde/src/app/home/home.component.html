@@ -1,20 +1,4 @@
-<section class="w-100 viewheight d-flex align-items-center flex-column  justify-content-center">
-    <div class="container py-5 d-flex justify-content-center align-items-center flex-column">
-        <h1 class="my-3 text-center">Encontre produtores perto de você</h1>
-        <form class="w-100">
-            <div class="form-row w-100 my-1 d-flex justify-content-center align-items-center">
-                <div class="col-md-6">
-                    <label class="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" class="form-control" id="inlineFormInput"
-                        placeholder="Digite aqui o nome Produtor">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary my-1">Pesquisar</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
+<app-search></app-search>
 <section class="w-100 py-5">
     <div class="container">
         <h1 class="mb-5">Produtores</h1>
@@ -55,7 +39,7 @@
                 </div>
             </div>
             <!-- Produto 6 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2 ">
+            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2">
                 <div class="overflow-hidden d-flex justify-content-center align-items-center">
                     <a href="#">
                         <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
@@ -68,63 +52,15 @@
     <div class="container">
         <h1 class="mb-5">Produtos</h1>
         <div class="row d-flex justify-content-center">
-            <div class="card m-3" style="width: 15.5rem;">
+            <div *ngFor="let item of listaProdutos" class="card m-3" style="width: 15.5rem;">
                 <img src="../../assets/img/produto/banana.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">Banana</h5>
+                <h5 class="card-title">{{item.nome}}</h5>
+                <h6 class="card-title">{{item.preco| currency:'BRL'}}</h6>
                 <a href="#" class="btn btn-primary">Conheça-nos</a>
                 </div>
             </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/mirtilo.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Mirtilo</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/mel.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Mel</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/laranja.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Laranja</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/milho.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Milho</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/cafe.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Café</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/batata.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Batata</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-            <div class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/cenoura.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Cenoura</h5>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
-                </div>
-            </div>
-        </div>        
+        </div> 
        
     </div>
 </section>

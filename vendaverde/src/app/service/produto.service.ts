@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -26,7 +27,22 @@ export class ProdutoService {
     return this.http.post<Produto[]>('http://localhost:8080/produtos', produto, this.token)
   }
 
+
+  getByNameProduto(nome: string): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`http://localhost:8080/produtos/${nome}`)
+  }
+
+  getByIdProdutos(id: number){
+    return this.http.get(`http://localhost:8080/produtos/${id}`, this.token)
+
+  }
+
+  putProduto(produto: Produto){
+    return this.http.put<Produto>('http://localhost:8080/produtos', produto ,this.token)
+  }
+
   deleteProduto(id: number) {
     return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token)
   }
 }
+

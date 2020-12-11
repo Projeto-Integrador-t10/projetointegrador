@@ -13,6 +13,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProdutoCategoriaComponent } from './cadastro-produto-categoria/cadastro-produto-categoria.component';
+import { SearchComponent } from './search/search.component';
+import { PutProdutosComponent } from './put-produtos/put-produtos.component';
 
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 
@@ -31,10 +33,11 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     LoginComponent,
     CadastroComponent,
     CadastroProdutoCategoriaComponent,
+    SearchComponent,
+    PutProdutosComponent,
     PutCategoriaComponent,
     DeleteProdutosComponent,
     DeleteCategoriaComponent
-
   ],
   imports: [
     BrowserModule,
