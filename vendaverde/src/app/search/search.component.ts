@@ -8,6 +8,7 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
   nome:string
 
   produto: Produto = new Produto()
@@ -20,7 +21,6 @@ export class SearchComponent implements OnInit {
   ) { }
 
   ngOnInit( ){
-    this.findAllByName()
   }
 
   
