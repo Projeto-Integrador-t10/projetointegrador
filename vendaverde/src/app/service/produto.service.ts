@@ -23,21 +23,20 @@ export class ProdutoService {
     return this.http.get<Produto>(`http://localhost:8080/produtos/${id}`, this.token)
   }
 
-  postProduto(produto: Produto): Observable<Produto[]> {
-    return this.http.post<Produto[]>('http://localhost:8080/produtos', produto, this.token)
-  }
-
-
   getByNameProduto(nome: string): Observable<Produto[]> {
     return this.http.get<Produto[]>(`http://localhost:8080/produtos/${nome}`)
   }
 
-  getByIdProdutos(id: number){
-    return this.http.get(`http://localhost:8080/produtos/${id}`, this.token)
+  getByIdProdutos(id: number) : Observable<Produto>{
+    return this.http.get<Produto>(`http://localhost:8080/produtos/${id}`, this.token)
 
   }
 
-  putProduto(produto: Produto){
+  postProduto(produto: Produto): Observable<Produto[]> {
+    return this.http.post<Produto[]>('http://localhost:8080/produtos', produto, this.token)
+  }
+
+  putProduto(produto: Produto) : Observable<Produto>{
     return this.http.put<Produto>('http://localhost:8080/produtos', produto ,this.token)
   }
 
