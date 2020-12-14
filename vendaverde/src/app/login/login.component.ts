@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {UsuarioLogin} from '../model/UsuarioLogin'
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -14,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    public router: Router
+    public router: Router, 
+    private alert: AlertasService
+    
   ) { }
 
   ngOnInit() {  
@@ -25,6 +28,12 @@ export class LoginComponent implements OnInit {
       this.usuarioLogin = resp
       localStorage.setItem('token', this.usuarioLogin.token)
       this.router.navigate(['/home'])      
-    })
+    }, err =>{
+      if(err.status == 500){
+        this.alert.showAlertInfo("Usuário logado")
+      }else{
+        this.alert.showAlertDanger("Usuário/Senha não confere!!")
+      }
+    })   
   }
 }

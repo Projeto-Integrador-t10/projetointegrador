@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -22,7 +23,8 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -35,11 +37,11 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
   cadastrar() {
     if (this.categoria.nome == null) {
-      alert('Preencha o campo "Descrição" corretamente')
+      this.alert.showAlertInfo('Preencha o campo "Descrição" corretamente')
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: any = Categoria) => {
         this.categoria = resp
-        alert('Categoria cadastrado com sucesso!')
+        this.alert.showAlertSuccess('Categoria cadastrado com sucesso!')
         this.findAllCategorias()
       })
     }
@@ -61,13 +63,13 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     this.categoria.id = this.idCategoria
 
     if (this.produto.nome == null || this.produto.preco == null || this.produto.quantidade == null || this.produto.estoque == null) {
-      alert("Preencha todos os campos")
+      this.alert.showAlertInfo("Preencha todos os campos")
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: any = Produto) => {
         this.produto = resp
         this.produto = new Produto()
         this.router.navigate(["/cadastro-produto"])
-        alert("Produto cadastrado com sucesso!")
+        this.alert.showAlertSuccess("Produto cadastrado com sucesso!")
         this.findAllProdutos()
       })
     }

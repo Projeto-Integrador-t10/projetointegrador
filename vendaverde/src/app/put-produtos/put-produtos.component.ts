@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -23,7 +24,8 @@ export class PutProdutosComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert: AlertasService
 
   ) { }
 
@@ -57,23 +59,22 @@ export class PutProdutosComponent implements OnInit {
   salvarProduto() {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
-    
+
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.router.navigate(['/cadastro-produto'])
-      alert("Produto atualizado com sucesso!")
+      this.alert.showAlertSuccess("Produto atualizado com sucesso!")
       this.findAllProdutos()
     }, err => {
-      if(err.status ==500 ){
-        alert("Preencha todo os campos corretamente!")
+      if (err.status == 500) {
+        this.alert.showAlertInfo("Preencha todo os campos corretamente!")
       }
     })
-}
+  }
 
-findByIdCategoria() {
-  this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: any = Categoria) => {
-    this.categoria = resp;
-  })
-}
-
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: any = Categoria) => {
+      this.categoria = resp;
+    })
+  }
 }

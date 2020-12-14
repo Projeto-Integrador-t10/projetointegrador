@@ -62,15 +62,11 @@
                     <td>{{produto.nome}}</td>
                     <td>{{produto.quantidade}}</td>
                     <td>{{produto.preco | currency:'BRL' }}</td>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-outline-success mt-2"
-                            [routerLink]="['/editar-produto', produto.id]">Editar</button>
-                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-produto', produto.id]">
-                            Apagar
-                        </button>
+
+                    <div class="d-flex justify-content-end">                       
+                    <button class="btn btn-outline-success mr-2" [routerLink]="['/editar-produto', produto.id]">Editar</button>
+                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-produto', produto.id]">Apagar</button>
                     </div>
-
-
                 </tr>
             </tbody>
         </table>
@@ -122,12 +118,8 @@
                             Apagar
                         </button>
                     </div>
-
                 </tr>
             </tbody>
-
         </table>
-
-
     </div>
 </div>
