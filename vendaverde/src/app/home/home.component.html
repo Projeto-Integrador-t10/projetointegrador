@@ -1,3 +1,4 @@
+
 <app-search></app-search>
 <section class="w-100 py-5">
     <div class="container">
@@ -57,10 +58,9 @@
                 <div class="card-body">
                 <h5 class="card-title">{{item.nome}}</h5>
                 <h6 class="card-title">{{item.preco| currency:'BRL'}}</h6>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
+                <a [routerLink]='["/prod", item.id]' class="btn btn-primary">Conheça-nos</a>
                 </div>
             </div>
         </div> 
-       
     </div>
 </section>

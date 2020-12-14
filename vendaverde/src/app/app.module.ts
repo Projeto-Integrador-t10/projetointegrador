@@ -20,6 +20,7 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { ProductComponent } from './product/product.component';
 
 
  
@@ -37,7 +38,8 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     PutProdutosComponent,
     PutCategoriaComponent,
     DeleteProdutosComponent,
-    DeleteCategoriaComponent
+    DeleteCategoriaComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
