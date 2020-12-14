@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class DeleteProdutosComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert:  AlertasService
   ) { }
 
   ngOnInit(){
@@ -38,7 +40,7 @@ export class DeleteProdutosComponent implements OnInit {
   btnSim() {
     this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
       this.router.navigate(['/cadastro-produto'])
-      alert('Produto apagado com sucesso!!')
+      this.alert.showAlertSuccess('Produto apagado com sucesso!!')
       this.findAllProdutos()
     })
   }

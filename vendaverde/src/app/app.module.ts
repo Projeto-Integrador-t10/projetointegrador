@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,6 +18,7 @@ import { PutProdutosComponent } from './put-produtos/put-produtos.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { AlertasComponent } from './alertas/alertas.component';
  
 @NgModule({
   declarations: [
@@ -32,14 +34,16 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     PutProdutosComponent,
     PutCategoriaComponent,
     DeleteProdutosComponent,
-    DeleteCategoriaComponent
+    DeleteCategoriaComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,    
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
