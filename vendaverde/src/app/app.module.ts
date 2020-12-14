@@ -18,7 +18,9 @@ import { PutProdutosComponent } from './put-produtos/put-produtos.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { ProductComponent } from './product/product.component';
 import { AlertasComponent } from './alertas/alertas.component';
+
  
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     PutCategoriaComponent,
     DeleteProdutosComponent,
     DeleteCategoriaComponent,
+    ProductComponent,
     AlertasComponent
   ],
   imports: [

@@ -9,6 +9,7 @@ import { PutProdutosComponent } from './put-produtos/put-produtos.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'editar-produto/:id', component: PutProdutosComponent},
   {path: 'editar-categoria/:id', component: PutCategoriaComponent},
   {path: 'delete-produto/:id', component: DeleteProdutosComponent},
-  {path: 'delete-categoria/:id', component: DeleteCategoriaComponent}
+  {path: 'delete-categoria/:id', component: DeleteCategoriaComponent},
+  {path: 'prod/:id', component: ProductComponent}
 ];
 
 @NgModule({
