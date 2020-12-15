@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     }, err =>{
       if(err.status == 500){
         this.alert.showAlertDanger("Usuário/Senha não confere!!")
-      }
+      } 
     })   
   }
 }

@@ -23,15 +23,11 @@ export class ProductComponent implements OnInit {
   ngOnInit(){
     this.prodId = this.route.snapshot.params["id"],
     this.findByIdProduto(this.prodId)
-
-
   }
 
   findByIdProduto(idProd: number) {
     this.produtoService.getByIdProdutos(idProd).subscribe((resp: any = Produto) => {
       this.produto = resp
     })
-
   }
-
 }
