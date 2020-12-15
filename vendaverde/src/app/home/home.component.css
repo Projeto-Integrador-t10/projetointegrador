@@ -11,12 +11,20 @@
     color: #49B577;
 }
 
-.carouselHeight {
-    height: 60vh;
+
+.slideImg {
+    height: 70vh;
     overflow: hidden;
+    object-fit: cover;
 }
 
-.carouselImg {
-    height: 300vh;
-    
+.img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 768px) {
+    .leadTitle {
+        font-size: 2rem;
+    }
 }

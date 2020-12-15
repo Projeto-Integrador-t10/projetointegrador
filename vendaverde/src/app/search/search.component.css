@@ -1,0 +1,20 @@
+.inputSearch {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 0;
+}
+
+.inputSearch:focus {
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.inputSearch:active {
+    background-color: transparent;
+    outline: none;
+    
+}
+
+
