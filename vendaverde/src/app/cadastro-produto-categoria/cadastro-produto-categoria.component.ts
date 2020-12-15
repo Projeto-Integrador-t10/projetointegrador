@@ -1,10 +1,10 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -16,18 +16,19 @@ import { ProdutoService } from '../service/produto.service';
 export class CadastroProdutoCategoriaComponent implements OnInit {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
-  
+
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
 
   constructor(
-    
+
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private router: Router,
     private alert: AlertasService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public auth: AuthService
   ) { }
 
   ngOnInit() {
@@ -51,7 +52,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
     }
   }
 
-  findAllCategorias()  {
+  findAllCategorias() {
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
       console.log("Lista de categorias" + JSON.stringify(this.listaCategorias))
@@ -94,6 +95,6 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
   }
 
   btnNao() {
-  this.router.navigate(['/cadastro-produto'])
-}
+    this.router.navigate(['/cadastro-produto'])
+  }
 }

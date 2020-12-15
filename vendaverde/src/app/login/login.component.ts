@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import {UsuarioLogin} from '../model/UsuarioLogin'
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
@@ -9,6 +10,7 @@ import { AuthService } from '../service/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
@@ -27,6 +29,7 @@ export class LoginComponent implements OnInit {
     this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=> {
       this.usuarioLogin = resp
       localStorage.setItem('token', this.usuarioLogin.token)
+      environment.admin = this.usuarioLogin.admin
       this.router.navigate(['/home'])      
     }, err =>{
       if(err.status == 500){
@@ -34,4 +37,5 @@ export class LoginComponent implements OnInit {
       } 
     })   
   }
+  
 }
