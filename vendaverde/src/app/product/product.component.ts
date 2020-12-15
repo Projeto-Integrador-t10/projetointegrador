@@ -8,6 +8,7 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
+
 export class ProductComponent implements OnInit {
   produto:Produto = new Produto()
 

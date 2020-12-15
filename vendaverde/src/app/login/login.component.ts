@@ -30,8 +30,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home'])      
     }, err =>{
       if(err.status == 500){
-        this.alert.showAlertInfo("Usuário logado")
-      }else{
         this.alert.showAlertDanger("Usuário/Senha não confere!!")
       }
     })   

@@ -1,5 +1,6 @@
 
 <app-search></app-search>
+
 <section class="w-100 py-5">
     <div class="container">
         <h1 class="mb-5">Produtores</h1>
@@ -53,14 +54,22 @@
     <div class="container">
         <h1 class="mb-5">Produtos</h1>
         <div class="row d-flex justify-content-center">
-            <div *ngFor="let item of listaProdutos" class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/banana.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">{{item.nome}}</h5>
-                <h6 class="card-title">{{item.preco| currency:'BRL'}}</h6>
-                <a [routerLink]='["/prod", item.id]' class="btn btn-primary">Conheça-nos</a>
+             <a *ngFor="let item of listaProdutos" [routerLink]='["/prod", item.id]'>
+            <div>
+                <div class="card m-3 text-dark" style="width: 15.5rem;">
+                    <img src="{{item.imag1}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title ">{{item.nome}}</h5>
+                    <h6 class="card-title ">{{item.preco| currency:'BRL'}}</h6>
+                    <a [routerLink]='["/cadastro-produto"]' class="btn btn-primary">Adicionar ao carrinho</a>
+                    </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
+
+        </a>
+
+        </div>
+       
+
     </div>
 </section>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
@@ -11,12 +12,18 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class DeleteProdutosComponent implements OnInit {
 
+  
+  @Input() message: string
+  @Input() type ='success'
+
+
   produto: Produto = new Produto() 
 
   listaProdutos: Produto[]
  
 
   constructor(
+    public modal:  BsModalRef,
     private produtoService: ProdutoService,
     private router: Router,
     private route: ActivatedRoute,

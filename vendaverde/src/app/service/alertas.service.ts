@@ -7,6 +7,7 @@ import { AlertasComponent } from '../alertas/alertas.component';
 })
 export class AlertasService {
 
+
   constructor(private bdModalService:  BsModalService) { }
 
   private showAlert(message: string, type: string){
@@ -26,4 +27,6 @@ export class AlertasService {
   showAlertInfo(message: string){
     this.showAlert(message, 'info')
   }
+
+
 }

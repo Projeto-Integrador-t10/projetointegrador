@@ -7,6 +7,21 @@
         <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto"
             [(ngModel)]='produto.nome'>
     </div>
+    <div class="form-group">
+        <label class="" for="nome">Primeira imagem:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto"
+            [(ngModel)]='produto.imag1'>
+    </div>
+    <div class="form-group">
+        <label class="" for="nome">Segunda imagem:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto"
+            [(ngModel)]='produto.imag2'>
+    </div>
+    <div class="form-group">
+        <label class="" for="nome">Terceira imagem:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto"
+            [(ngModel)]='produto.imag3'>
+    </div>
 
     <div class="form-group">
         <label class="" for="titulo">Preço:</label>
@@ -65,7 +80,7 @@
 
                     <div class="d-flex justify-content-end">                       
                     <button class="btn btn-outline-success mr-2" [routerLink]="['/editar-produto', produto.id]">Editar</button>
-                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-produto', produto.id]">Apagar</button>
+                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-produto', produto.id]">Apagar</button>
                     </div>
                 </tr>
             </tbody>
@@ -114,7 +129,7 @@
                             Editar
                         </button>
 
-                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-categoria', categoria.id]">
+                        <button class="btn btn-outline-danger ml-3" data-toggle="modal" data-target="#delete">
                             Apagar
                         </button>
                     </div>
@@ -122,4 +137,24 @@
             </tbody>
         </table>
     </div>
+
+    <!-- modal -->
+
+    <div class="modal" id="delete" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">{{categoria.nome}}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="btnNao()">Não</button>
+              <button type="button" class="btn btn-primary" (click)="btnSim()">Sim</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>

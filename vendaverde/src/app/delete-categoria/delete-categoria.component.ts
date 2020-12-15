@@ -11,6 +11,9 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class DeleteCategoriaComponent implements OnInit {
 
+  myModal = document.getElementById('myModal')
+  myInput = document.getElementById('myInput')
+
   categoria: Categoria= new Categoria()
 
   constructor(
@@ -19,6 +22,8 @@ export class DeleteCategoriaComponent implements OnInit {
     private route: ActivatedRoute,
     private alert: AlertasService
   ) { }
+
+
 
   ngOnInit(){
     window.scroll(0,0)

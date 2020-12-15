@@ -1,5 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
@@ -21,15 +22,18 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
   idCategoria: number
 
   constructor(
+    
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private router: Router,
-    private alert: AlertasService
+    private alert: AlertasService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
 
+    let id: number = this.route.snapshot.params["id"]
     this.findAllCategorias()
     this.findByIdCategoria()
     this.findAllProdutos()
@@ -81,4 +85,15 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
       console.log(this.listaProdutos)
     })
   }
+
+  btnSim() {
+    this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
+      this.router.navigate(['/cadastro-produto'])
+      this.alert.showAlertSuccess('Categoria apagada com sucesso!')
+    })
+  }
+
+  btnNao() {
+  this.router.navigate(['/cadastro-produto'])
+}
 }
