@@ -1,58 +1,19 @@
 <app-search></app-search>
 
-<section class="w-100 py-5">
-    <div class="container">
-        <h1 class="mb-5">Produtores</h1>
-        <div class="row d-flex justify-content-center">
-            <!-- Produto 1 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2 ">
-                <div class="overflow-hidden d-flex justify-content-center align-items-center">
-                    <a href="#">
-                        <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
-                </div>
-            </div>
-            <!-- Produto 2 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2 ">
-                <div class="overflow-hidden d-flex justify-content-center align-items-center">
-                    <a href="#">
-                        <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
-                </div>
-            </div>
-            <!-- Produto 3 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2 ">
-                <div class="overflow-hidden d-flex justify-content-center align-items-center">
-                    <a href="#">
-                        <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
-                </div>
-            </div>
-            <!-- Produto 4 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2 ">
-                <div class="overflow-hidden d-flex justify-content-center align-items-center">
-                    <a href="#">
-                        <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
-                </div>
-            </div>
-            <!-- Produto 5 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2 ">
-                <div class="overflow-hidden d-flex justify-content-center align-items-center">
-                    <a href="#">
-                        <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
-                </div>
-            </div>
-            <!-- Produto 6 -->
-            <div class="col d-flex flex-column align-items-center maxwidth p-3 m-2">
-                <div class="overflow-hidden d-flex justify-content-center align-items-center">
-                    <a href="#">
-                        <img src="../../assets/img/produto/logo.jpg" alt="" class="rounded-circle img-fluid w-100"></a>
-                </div>
-            </div>
-        </div>      
-    </div>
+<!-- Hero section -->
+<section class="w-100 carouselHeight bg-dark">
+   
 </section>
-<section class="w-100 py-5">    
+<!-- Hero section -->
+
+<!-- Cards de Produto -->
+<section class="w-100 my-5 py-5">    
     <div class="container">
-        <h1 class="mb-5">Produtos</h1>
-        <div class="row d-flex justify-content-center">
+        <div class="w-100 my-5 w-100 text-center">
+            <p class="color-font mb-0"><small>Fortaleça os produtores perto de você</small></p>
+            <h1 class="">Produtos em destaque</h1>
+        </div>
+        <div class="row d-flex justify-content-start">
             <div *ngFor="let item of listaProdutos" class="card m-3" style="width: 15.5rem;">
                 <img src="../../assets/img/produto/banana.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -64,3 +25,5 @@
         </div> 
     </div>
 </section>
+
+<!-- Cards de Produto -->

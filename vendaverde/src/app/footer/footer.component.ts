@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -9,11 +8,11 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons'
 })
 export class FooterComponent implements OnInit {
 
-  faInstagram = faInstagram
-  faGithub = faGithub
+  constructor(
+    private router: Router
+  ) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    window.scroll(0, 0)
   }
 }

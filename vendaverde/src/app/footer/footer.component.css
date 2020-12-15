@@ -1,28 +1,24 @@
-/* footer social icons */
-#footer {
-    background-color:#74BF94;
+.btn-social {
+    padding: 10px;
 }
 
-ul.social-network {
-    list-style: none;
-    display: inline;  
-    padding: 0;
-  }
-  
-  ul.social-network li {
-    display: inline;
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .faInstagram, .faGithub{
-      color: rgb(0, 0, 0);
-  }
+.btn-social:hover {
+    background-color: #49b578a9;
     
-  .faInstagram:hover{
-  color: #C13584;
-    }
+}
 
-  .faGithub:hover{
-    color: #0a2cee;
+.logo {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+
+.sec-footer-bg {
+    background-color: #49b578;
+}
+
+.footer-links {
+    text-decoration: none;
+    cursor: pointer;
 }
