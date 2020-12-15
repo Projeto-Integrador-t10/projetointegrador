@@ -1,5 +1,5 @@
-
 <section class="w-100 viewheight d-flex align-items-center flex-column  justify-content-center">
+
     <div class="container py-5 d-flex justify-content-center align-items-center flex-column">
         <h1 class="my-3 text-center">Encontre produtores perto de você</h1>
         <form class="w-100">
@@ -7,28 +7,28 @@
                 <div class="col-md-6">
                     <label class="sr-only" for="inlineFormInput">Name</label>
                     <input type="text" [(ngModel)]='this.nome' class="form-control" id="inlineFormInput"
-                        placeholder="Digite aqui o nome Produtor" [ngModelOptions]="{standalone: true}">
+                        placeholder="Digite aqui o nome Produto" [ngModelOptions]="{standalone: true}">
                 </div>
                 <div>
                     <button type="submit" class="btn btn-primary my-1" (click)="findAllByName()">Pesquisar</button>
                 </div>
             </div>
         </form>
-        
     </div>
+
 </section>
-<section class="w-100 py-5">    
+<section class="w-100 py-5">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div *ngFor="let item of listaProdutos" class="card m-3" style="width: 15.5rem;">
-                <img src="../../assets/img/produto/banana.jpg" class="card-img-top" alt="...">
+                <img src="{{item.imag1}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">{{item.nome}}</h5>
-                <h6 class="card-title">{{item.preco| currency:'BRL'}}</h6>
-                <a href="#" class="btn btn-primary">Conheça-nos</a>
+                    <h5 class="card-title">{{item.nome}}</h5>
+                    <h6 class="card-title">{{item.preco| currency:'BRL'}}</h6>
+                    <a href="#" class="btn btn-primary">Adicione ao carrinho</a>
                 </div>
             </div>
-        </div> 
-       
+        </div>
+
     </div>
 </section>
