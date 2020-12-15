@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../model/Produto';
+import { AuthService } from '../service/auth.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -16,13 +17,12 @@ export class SearchComponent implements OnInit {
 
   constructor(
 
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService   
 
   ) { }
 
   ngOnInit( ){
   }
-
   
   findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
@@ -39,7 +39,5 @@ export class SearchComponent implements OnInit {
         this.listaProdutos = resp
       })
     }
-
   }
-
 }

@@ -92,15 +92,19 @@
 
 <hr class="my-3">
 
-<div class="container my-5">
-    <h2 class="my-5">Cadastre uma categoria</h2>
-    <div class="form-group">
-        <label class="" for="nome">Nome da categoria</label>
-        <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
-            placeholder="Digite aqui o nome da nova categoria">
-        <div class="form-group d-flex justify-content-end">
-            <button type="button" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
+<div *ngIf='auth.userAdmin()'>
+
+    <div class="container my-5">
+        <h2 class="my-5">Cadastre uma categoria</h2>
+        <div class="form-group">
+            <label class="" for="nome">Nome da categoria</label>
+            <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
+                placeholder="Digite aqui o nome da nova categoria">
+            <div class="form-group d-flex justify-content-end">
+                <button type="button" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
+            </div>
         </div>
+    
     </div>
 
 </div>
@@ -123,23 +127,28 @@
                 <tr>
                     <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
-                    <div class="d-flex justify-content-end">
 
-                        <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
-                            Editar
-                        </button>
+                    <div *ngIf='auth.userAdmin()'>
 
-                        <button class="btn btn-outline-danger ml-3" data-toggle="modal" data-target="#delete">
-                            Apagar
-                        </button>
+                        <div class="d-flex justify-content-end">
+
+                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
+                                Editar
+                            </button>
+    
+                            <button class="btn btn-outline-danger ml-3" data-toggle="modal" data-target="#delete">
+                                Apagar
+                            </button>
+                        </div>
                     </div>
+                    
                 </tr>
             </tbody>
         </table>
     </div>
 
     <!-- modal -->
-
+<!--
     <div class="modal" id="delete" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -157,4 +166,5 @@
           </div>
         </div>
       </div>
+      -->
 </div>
