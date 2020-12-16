@@ -8,6 +8,7 @@
     </div>
     <div class="form-group">
         <label class="" for="nome">Primeira imagem:</label>
+<<<<<<< HEAD
         <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto" [(ngModel)]='produto.imag1'>
     </div>
     <div class="form-group">
@@ -17,6 +18,20 @@
     <div class="form-group">
         <label class="" for="nome">Terceira imagem:</label>
         <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto" [(ngModel)]='produto.imag3'>
+=======
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui a URL da imagem"
+            [(ngModel)]='produto.imag1'>
+    </div>
+    <div class="form-group">
+        <label class="" for="nome">Segunda imagem:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui a URL da imagem"
+            [(ngModel)]='produto.imag2'>
+    </div>
+    <div class="form-group">
+        <label class="" for="nome">Terceira imagem:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite aqui a URL da imagem"
+            [(ngModel)]='produto.imag3'>
+>>>>>>> ec9a6e00411d723ac352ff41bf0b3911e5cbcbf4
     </div>
 
     <div class="form-group">
@@ -26,7 +41,12 @@
 
     <div class="form-group">
         <label class="" for="titulo">Quantidade:</label>
+<<<<<<< HEAD
         <input type="number" class="form-control" id="quantidade" placeholder="Digite aqui o preço do produto" [(ngModel)]='produto.quantidade'>
+=======
+        <input type="number" class="form-control" id="quantidade" placeholder="Digite aqui a quantidade disponível"
+            [(ngModel)]='produto.quantidade'>
+>>>>>>> ec9a6e00411d723ac352ff41bf0b3911e5cbcbf4
     </div>
 
     <div class="form-group form-check">
@@ -72,11 +92,16 @@
                     <td>{{produto.nome}}</td>
                     <td>{{produto.quantidade}}</td>
                     <td>{{produto.preco | currency:'BRL' }}</td>
+<<<<<<< HEAD
                     <td>{{produto.categoria.nome}}</td>
+=======
+                    <td>{{produto.categoria.nome}}</td>                    
+>>>>>>> ec9a6e00411d723ac352ff41bf0b3911e5cbcbf4
 
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-outline-success mr-2"
+                        <button class="btn btn-outline-success mr-2 mt-1"
                             [routerLink]="['/editar-produto', produto.id]">Editar</button>
+
                         <button class="btn btn-outline-danger ml-3"
                             [routerLink]="['/delete-produto', produto.id]">Apagar</button>
                     </div>
@@ -111,7 +136,11 @@
     <div>
         <table class="table table-striped">
             <thead>
+<<<<<<< HEAD
                 <tr>
+=======
+                <tr>                    
+>>>>>>> ec9a6e00411d723ac352ff41bf0b3911e5cbcbf4
                     <th scope="col">Nome da categoria</th>
 
                 </tr>

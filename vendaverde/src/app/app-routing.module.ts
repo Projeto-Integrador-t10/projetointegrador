@@ -10,6 +10,7 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { ProductComponent } from './product/product.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { DoarComponent } from './doar/doar.component';
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'delete-produto/:id', component: DeleteProdutosComponent},
   {path: 'delete-categoria/:id', component: DeleteCategoriaComponent},
   {path: 'prod/:id', component: ProductComponent},
+  {path: 'pesquisa/:nome', component: PesquisaComponent},
   {path: 'doar', component: DoarComponent}
 ];
 

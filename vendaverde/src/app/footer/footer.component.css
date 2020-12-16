@@ -20,4 +20,16 @@
 .footer-links {
     text-decoration: none;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+}
+
+@media(max-width: 768px) {
+    .centerFooterOnSmallDevices {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        text-align: center!important;
+    }
+>>>>>>> ec9a6e00411d723ac352ff41bf0b3911e5cbcbf4
 }

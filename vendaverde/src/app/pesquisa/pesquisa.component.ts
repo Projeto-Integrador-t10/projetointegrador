@@ -1,40 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/Produto';
-
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  selector: 'app-pesquisa',
+  templateUrl: './pesquisa.component.html',
+  styleUrls: ['./pesquisa.component.css']
 })
-export class SearchComponent implements OnInit {
+export class PesquisaComponent implements OnInit {
 
-  nome:string
-  
+  nome: string
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
- 
 
   constructor(
-
-    private produtoService: ProdutoService   
-
+    private produtoService: ProdutoService,
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
-  ngOnInit( 
-    tamanho:number = this.listaProdutos.length
-  ){
-  }
-  
-  findAllProdutos() {
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp
-      console.log(this.listaProdutos)
-    })
-  }
+  ngOnInit( ){
+    this.nome = this.route.snapshot.params["nome"]
+    this.findAllByName()
 
+  }
   findAllByName(){
     if(this.nome == ""){
       alert("Preencha a barra antes de pesquisar!")
@@ -45,5 +36,4 @@ export class SearchComponent implements OnInit {
       })
     }
   }
-  
 }
