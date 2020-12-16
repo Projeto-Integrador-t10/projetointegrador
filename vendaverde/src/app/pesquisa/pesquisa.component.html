@@ -1,19 +1,8 @@
-<section class="w-100 container-fluid bg-dark py-2">
-    <form class="w-100">
-        <div class="form-inline">
-            <div class="w-100 d-flex align-items-center">
-                <button type="submit" class="btn px-1 mr-2 fluid" (click)="findAllByName()">
-                    <img src="../../assets/icons/search-line.svg" alt="">
-                </button>
-                <input type="text" [(ngModel)]='this.nome' class="form-control inputSearch fluid w-100" id="inlineFormInput"
-                    placeholder="Busque por produtos" [ngModelOptions]="{standalone: true}">
-            </div>
-            <div>
-            </div>
-        </div>
-    </form>
-</section>
-<section>
+<app-search></app-search>
+<section class="w-100 my-5 py-5">
+    <div class="container">
+
+
         <div class="row row-cols-1 row-cols-md-4">
             <div class="col mb-4" *ngFor="let item of listaProdutos">
               <div class="card">
@@ -29,5 +18,5 @@
             </div>
 
           </div>
-    
+    </div>
 </section>

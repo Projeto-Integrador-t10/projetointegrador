@@ -1,33 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-pesquisa',
+  templateUrl: './pesquisa.component.html',
+  styleUrls: ['./pesquisa.component.css']
 })
-export class HomeComponent implements OnInit {
+export class PesquisaComponent implements OnInit {
 
-  nome:string
-  
+  nome: string
+
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
   constructor(
-    
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
-  ngOnInit(){
-    window.scroll(0, 0),
-    this.findAllProdutos()
-  }
-  findAllProdutos() {
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp
-      console.log(this.listaProdutos)
-    })
+  ngOnInit( ){
+    this.nome = this.route.snapshot.params["nome"]
+    this.findAllByName()
+
   }
   findAllByName(){
     if(this.nome == ""){
@@ -35,6 +32,7 @@ export class HomeComponent implements OnInit {
     } else{
       this.produtoService.getByNameProduto(this.nome).subscribe((resp: Produto[])=>{
         this.listaProdutos = resp
+       
       })
     }
   }
