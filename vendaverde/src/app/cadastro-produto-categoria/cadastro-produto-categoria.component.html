@@ -68,15 +68,16 @@
                     <th scope="col">Nome do produto</th>
                     <th scope="col">Quantidade</th>
                     <th scope="col">Preço</th>
+                    <th scope="col">Categoria</th>
                 </tr>
             </thead>
             <tbody *ngFor='let produto of listaProdutos'>
                 <tr>
-
                     <th>{{produto.id}}</th>
                     <td>{{produto.nome}}</td>
                     <td>{{produto.quantidade}}</td>
                     <td>{{produto.preco | currency:'BRL' }}</td>
+                    <td>{{produto.categoria.nome}}</td>
 
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-outline-success mr-2 mt-1"
@@ -94,7 +95,7 @@
 
 <hr class="my-3">
 
-<div class="container my-5" *ngIf='auth.userAdmin()'>
+<div class="container my-5" >
     <h2 class="my-5">Cadastre uma categoria</h2>
     <div class="form-group">
         <label class="" for="nome">Nome da categoria</label>
@@ -126,13 +127,13 @@
                     <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
 
-                    <div class="d-flex justify-content-end" *ngIf='auth.userAdmin()'>
+                    <div class="d-flex justify-content-end" ><!-- *ngIf='auth.userAdmin()' -->
 
                         <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
                             Editar
                         </button>
 
-                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-categoria', categoria.id]">
+                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-categoria', categoria.id]">
                             Apagar
                         </button>
                     </div>
