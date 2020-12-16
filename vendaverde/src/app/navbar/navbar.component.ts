@@ -14,7 +14,8 @@ export class NavbarComponent implements OnInit {
     public auth: AuthService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    
   }
 
   sair(){
