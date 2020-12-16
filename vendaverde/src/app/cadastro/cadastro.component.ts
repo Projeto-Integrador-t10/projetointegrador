@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastroComponent implements OnInit {
 
-  usuario: Usuario = new Usuario
+  usuario: Usuario = new Usuario();
   senha: string
 
   constructor(
@@ -21,10 +21,16 @@ export class CadastroComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    this.usuario.admin = false;
   }
+
   conferirSenha( event: any) {
     this.senha = event.target.value
 
+  }
+
+  toggleVisibility(e:any){
+    this.usuario.admin = e.target.checked;
   }
 
   cadastrar() {
@@ -35,7 +41,7 @@ export class CadastroComponent implements OnInit {
         this.alert.showAlertSuccess('Usuario cadastrado com sucesso!!')
       }, err => {        
         if (err.status == 400) {
-          alert("usuario ja cadastrado")
+          this.alert.showAlertDanger("usuario ja cadastrado")
         }
       })
     }else{

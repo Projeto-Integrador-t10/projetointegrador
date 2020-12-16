@@ -40,6 +40,6 @@ export class AuthService {
     let ok = false
     let admin = environment.admin
 
-    if(admin == true){ok = true}else{ok = true} return ok
+    if(admin == true){ok = true}else{ok = false} return ok
   }
 }

@@ -78,9 +78,11 @@
                     <td>{{produto.quantidade}}</td>
                     <td>{{produto.preco | currency:'BRL' }}</td>
 
-                    <div class="d-flex justify-content-end">                       
-                    <button class="btn btn-outline-success mr-2" [routerLink]="['/editar-produto', produto.id]">Editar</button>
-                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-produto', produto.id]">Apagar</button>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-outline-success mr-2"
+                            [routerLink]="['/editar-produto', produto.id]">Editar</button>
+                        <button class="btn btn-outline-danger ml-3"
+                            [routerLink]="['/deletar-produto', produto.id]">Apagar</button>
                     </div>
                 </tr>
             </tbody>
@@ -92,19 +94,15 @@
 
 <hr class="my-3">
 
-<div *ngIf='auth.userAdmin()'>
-
-    <div class="container my-5">
-        <h2 class="my-5">Cadastre uma categoria</h2>
-        <div class="form-group">
-            <label class="" for="nome">Nome da categoria</label>
-            <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
-                placeholder="Digite aqui o nome da nova categoria">
-            <div class="form-group d-flex justify-content-end">
-                <button type="button" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
-            </div>
+<div class="container my-5" *ngIf='auth.userAdmin()'>
+    <h2 class="my-5">Cadastre uma categoria</h2>
+    <div class="form-group">
+        <label class="" for="nome">Nome da categoria</label>
+        <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
+            placeholder="Digite aqui o nome da nova categoria">
+        <div class="form-group d-flex justify-content-end">
+            <button type="button" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
         </div>
-    
     </div>
 
 </div>
@@ -112,7 +110,7 @@
 <hr class="my-3">
 
 <!-- Listar produtos cadastrados -->
-<div class="container my-5">
+<div class="container my-5" >
     <h2 class="my-5">Categorias Cadastradas</h2>
     <div>
         <table class="table table-striped">
@@ -128,27 +126,23 @@
                     <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
 
-                    <div *ngIf='auth.userAdmin()'>
+                    <div class="d-flex justify-content-end" *ngIf='auth.userAdmin()'>
 
-                        <div class="d-flex justify-content-end">
+                        <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
+                            Editar
+                        </button>
 
-                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
-                                Editar
-                            </button>
-    
-                            <button class="btn btn-outline-danger ml-3" data-toggle="modal" data-target="#delete">
-                                Apagar
-                            </button>
-                        </div>
+                        <button class="btn btn-outline-danger ml-3" data-toggle="modal" data-target="#delete">
+                            Apagar
+                        </button>
                     </div>
-                    
                 </tr>
             </tbody>
         </table>
     </div>
 
     <!-- modal -->
-<!--
+    <!--
     <div class="modal" id="delete" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">

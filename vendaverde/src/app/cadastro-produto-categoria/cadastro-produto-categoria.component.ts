@@ -13,6 +13,7 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './cadastro-produto-categoria.component.html',
   styleUrls: ['./cadastro-produto-categoria.component.css']
 })
+
 export class CadastroProdutoCategoriaComponent implements OnInit {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
