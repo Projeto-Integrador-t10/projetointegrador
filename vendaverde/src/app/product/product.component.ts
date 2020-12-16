@@ -10,6 +10,7 @@ import { ProdutoService } from '../service/produto.service';
 })
 
 export class ProductComponent implements OnInit {
+  
   produto:Produto = new Produto()
 
   prodId:number

@@ -25,7 +25,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
   constructor(
 
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService,
+    private produtoService: ProdutoService,   
     private router: Router,
     private alert: AlertasService,
     private route: ActivatedRoute,
