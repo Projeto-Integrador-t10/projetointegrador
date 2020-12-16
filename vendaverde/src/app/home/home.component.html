@@ -51,20 +51,27 @@
 <!-- Cards de Produto -->
 <section class="w-100 my-5 py-5">
     <div class="container">
-        <h1 class="mb-5">Produtos</h1>
-        <div class="row d-flex justify-content-center">
-            <a *ngFor="let item of listaProdutos" [routerLink]='["/prod", item.id]'>
-                <div>
-                    <div class="card m-3 text-dark" style="width: 15.5rem;">
-                        <img src="{{item.imag1}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title ">{{item.nome}}</h5>
-                            <h6 class="card-title ">{{item.preco| currency:'BRL'}}</h6>
-                        </div>
-                    </div>
-                </div>
-            </a>
+        <div class="w-100 my-5 w-100 text-center">
+            <p class="color-font mb-0"><small>Fortaleça os produtores perto de você</small></p>
+            <h1 class="">Produtos em destaque</h1>
         </div>
+        <div class="row row-cols-1 row-cols-md-4">
+            <div class="col mb-4" *ngFor="let item of listaProdutos | slice:0:4 ; let i=index ">
+              <div class="card border">
+                <div class="cardImg">
+                    <img src="{{item.imag1}}" class="card-img-top innerImg" alt="...">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{item.nome}}</h5>
+                  <h5 class="card-title">{{item.preco | currency:'BRL'}}</h5>
+                  <button type="button" class="btn btn-success" [routerLink]='["/prod", item.id]'>Ver detalhes do produto</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="justitfy-content-end" *ngIf="listaProdutos.length > 4">
+            <button type="button" class="btn btn-outline-success" [routerLink]='["/pesquisa", this.nome]'>Veja mais...</button>
     </div>
+    </div>  
 </section>
 <!-- Cards de Produto -->
