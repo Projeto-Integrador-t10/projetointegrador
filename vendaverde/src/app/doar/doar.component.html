@@ -30,14 +30,13 @@
     </div>
     <div class="col-md-4">
       <h1>{{produto.nome}}</h1>
+      
       <p>Product description</p>
 
-
-
-         <div class="col-md-4">
-                  <h1>{{produto.nome}}</h1>          
-                  <h5>{{produto.preco | currency:'BRL'}}</h5>                  
-                  <button class="btn btn-outline-success m-1" (click)='doar()'>doar</button>
-           </div>
+      <div class="col-md-4">
+        <h1>{{produto.nome}}</h1>
+        <h5>{{produto.preco | currency:'BRL'}}</h5>
+        <button class="btn btn-outline-success m-1" (click)='doar()'>doar</button>
+      </div>
     </div>
-</div>
+  </div>

@@ -3,8 +3,7 @@
 }
 
 .btn-social:hover {
-    background-color: #49b578a9;
-    
+    background-color: #49b578a9;    
 }
 
 .logo {
@@ -21,13 +20,4 @@
 .footer-links {
     text-decoration: none;
     cursor: pointer;
-}
-
-@media(max-width: 768px) {
-    .centerFooterOnSmallDevices {
-        display: flex!important;
-        justify-content: center!important;
-        align-items: center!important;
-        text-align: center!important;
-    }
 }

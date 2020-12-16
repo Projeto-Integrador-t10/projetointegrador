@@ -28,6 +28,5 @@ export class DoarComponent implements OnInit {
   doar(){
     this.alert.showAlertSuccess("Produto doado com sucesso")
     this.router.navigate(['/home']) 
-  }
-  
+  }  
 }

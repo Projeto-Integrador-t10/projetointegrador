@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PutProdutosComponent } from './put-produtos.component';
 
 describe('PutProdutosComponent', () => {
