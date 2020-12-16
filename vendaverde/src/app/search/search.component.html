@@ -1,33 +1,33 @@
-<section class="w-100 viewheight d-flex align-items-center flex-column  justify-content-center">
-
-    <div class="container py-5 d-flex justify-content-center align-items-center flex-column">
-        <h1 class="my-3 text-center">Encontre produtores perto de você</h1>
-        <form class="w-100">
-            <div class="form-row w-100 my-1 d-flex justify-content-center align-items-center">
-                <div class="col-md-6">
-                    <label class="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" [(ngModel)]='this.nome' class="form-control" id="inlineFormInput"
-                        placeholder="Digite aqui o nome Produto" [ngModelOptions]="{standalone: true}">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary my-1" (click)="findAllByName()">Pesquisar</button>
-                </div>
+<section class="w-100 container-fluid bg-dark py-2">
+    <form class="w-100">
+        <div class="form-inline">
+            <div class="w-100 d-flex align-items-center">
+                <button type="submit" class="btn px-1 mr-2 fluid" (click)="findAllByName()">
+                    <img src="../../assets/icons/search-line.svg" alt="">
+                </button>
+                <input type="text" [(ngModel)]='this.nome' class="form-control inputSearch fluid w-100" id="inlineFormInput"
+                    placeholder="Busque por produtos" [ngModelOptions]="{standalone: true}">
             </div>
-        </form>
-    </div>
-
-</section>
-<section class="w-100 py-5">
-    <div class="container">
-        <div class="row d-flex justify-content-start">
-            <div *ngFor="let item of listaProdutos" class="card m-3" style="width: 15.5rem;">
-                <img src="{{item.imag1}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{item.nome}}</h5>
-                    <h6 class="card-title">{{item.preco| currency:'BRL'}}</h6>
-                    <a href="#" class="btn btn-primary">Adicione ao carrinho</a>
-                </div>
+            <div>
             </div>
         </div>
+    </form>
+</section>
+
+<section class="w-100 bg-dark">    
+    <div class="container">
+        <div class="row d-flex justify-content-start ">
+            <a [routerLink]='["/prod", item.id]' *ngFor="let item of listaProdutos">
+                <div class="card m-3 border border-success" style="width: 15.5rem;">
+                
+                <img src="{{item.imag1}}" class="card-img-top" alt="produto">
+                <div class="card-body">
+                <h5 class="card-title text-dark">{{item.nome}}</h5>
+                <h6 class="card-title text-dark">{{item.preco| currency:'BRL'}}</h6>
+                </div>
+                </div>
+            </a>            
+        </div> 
+       
     </div>
 </section>

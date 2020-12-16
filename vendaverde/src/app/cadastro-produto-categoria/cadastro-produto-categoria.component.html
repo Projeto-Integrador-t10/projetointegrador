@@ -79,9 +79,9 @@
                     <td>{{produto.preco | currency:'BRL' }}</td>
 
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-outline-success mr-2"
+                        <button class="btn btn-outline-success mr-2 mt-1"
                             [routerLink]="['/editar-produto', produto.id]">Editar</button>
-                        <button class="btn btn-outline-danger ml-3"
+                        <button class="btn btn-outline-danger ml-3 mt-1"
                             [routerLink]="['/deletar-produto', produto.id]">Apagar</button>
                     </div>
                 </tr>
