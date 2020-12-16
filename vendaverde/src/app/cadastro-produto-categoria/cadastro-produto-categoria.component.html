@@ -132,7 +132,7 @@
                             Editar
                         </button>
 
-                        <button class="btn btn-outline-danger ml-3" data-toggle="modal" data-target="#delete">
+                        <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-categoria', categoria.id]">
                             Apagar
                         </button>
                     </div>
@@ -140,25 +140,4 @@
             </tbody>
         </table>
     </div>
-
-    <!-- modal -->
-    <!--
-    <div class="modal" id="delete" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">{{categoria.nome}}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="btnNao()">Não</button>
-              <button type="button" class="btn btn-primary" (click)="btnSim()">Sim</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
 </div>
