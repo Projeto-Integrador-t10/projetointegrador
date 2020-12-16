@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DoarComponent } from './doar.component';
 
 describe('DoarComponent', () => {

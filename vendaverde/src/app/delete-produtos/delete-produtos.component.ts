@@ -11,16 +11,13 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./delete-produtos.component.css']
 })
 export class DeleteProdutosComponent implements OnInit {
-
   
   @Input() message: string
   @Input() type ='success'
 
-
   produto: Produto = new Produto() 
 
-  listaProdutos: Produto[]
- 
+  listaProdutos: Produto[] 
 
   constructor(
     public modal:  BsModalRef,

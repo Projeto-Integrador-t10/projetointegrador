@@ -11,19 +11,16 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slideImg d-flex justify-content-center align-items-center">
-                    <img src="../../assets/img/organic.png"
-                        class="d-block w-100 img" alt="...">
+                    <img src="../../assets/img/organic.png" class="d-block w-100 img" alt="...">
                 </div>
                 <div class="carousel-caption d-flex justify-content-center align-items-start flex-column h-100">
                     <h2 class="display-3 leadTitle text-left">Fortaleça pequenos produtores perto de você!</h2>
-                    <p class="lead text-left">Acreditamos no consumo responsável e sustentável. Conheça e apoie os
-                        pequenos produtores nas suas proximidades.</p>
+                    <p class="lead text-left">Acreditamos no consumo responsável e sustentável. Conheça e apoie os pequenos produtores nas suas proximidades.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="slideImg d-flex justify-content-center align-items-center">
-                    <img src="../../assets/img/organic.png"
-                        class="d-block w-100 img" alt="...">
+                    <img src="../../assets/img/organic.png" class="d-block w-100 img" alt="...">
                 </div>
                 <div class="carousel-caption d-flex justify-content-center align-items-start flex-column h-100">
                     <h2 class="display-3 leadTitle text-left">Dividir o pão de cada dia agora ficou mais fácil</h2>
@@ -32,8 +29,7 @@
             </div>
             <div class="carousel-item">
                 <div class="slideImg d-flex justify-content-center align-items-center">
-                    <img src="../../assets/img/organic.png"
-                        class="d-block w-100 img" alt="...">
+                    <img src="../../assets/img/organic.png" class="d-block w-100 img" alt="...">
                 </div>
                 <div class="carousel-caption d-flex justify-content-center align-items-start flex-column h-100">
                     <h2 class="display-3 leadTitle text-left">Acreditamos em pequenos esforços diários</h2>
@@ -58,20 +54,18 @@
     <div class="container">
         <h1 class="mb-5">Produtos</h1>
         <div class="row d-flex justify-content-center">
-             <a *ngFor="let item of listaProdutos" [routerLink]='["/prod", item.id]'>
-            <div>
-                <div class="card m-3 text-dark" style="width: 15.5rem;">
-                    <img src="{{item.imag1}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title ">{{item.nome}}</h5>
-                    <h6 class="card-title ">{{item.preco| currency:'BRL'}}</h6>                    
+            <a *ngFor="let item of listaProdutos" [routerLink]='["/prod", item.id]'>
+                <div>
+                    <div class="card m-3 text-dark" style="width: 15.5rem;">
+                        <img src="{{item.imag1}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title ">{{item.nome}}</h5>
+                            <h6 class="card-title ">{{item.preco| currency:'BRL'}}</h6>
+                        </div>
                     </div>
                 </div>
-            </div> 
-        </a>
-        </div>     
-
+            </a>
+        </div>
     </div>
 </section>
-
 <!-- Cards de Produto -->
