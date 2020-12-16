@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+!node_modules\bootstrap\scss\_variables.scss
 
 # profiling files
 chrome-profiler-events*.json

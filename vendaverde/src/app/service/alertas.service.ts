@@ -27,6 +27,4 @@ export class AlertasService {
   showAlertInfo(message: string){
     this.showAlert(message, 'info')
   }
-
-
 }
