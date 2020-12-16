@@ -20,6 +20,8 @@ import { DeleteProdutosComponent } from './delete-produtos/delete-produtos.compo
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { ProductComponent } from './product/product.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { DoarComponent } from './doar/doar.component';
 
  
 @NgModule({
@@ -38,7 +40,9 @@ import { AlertasComponent } from './alertas/alertas.component';
     DeleteProdutosComponent,
     DeleteCategoriaComponent,
     ProductComponent,
-    AlertasComponent
+    AlertasComponent,
+    PesquisaComponent,
+    DoarComponent
   ],
   imports: [
     BrowserModule,
