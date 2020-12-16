@@ -17,8 +17,8 @@
 <section class="w-100 bg-dark">    
     <div class="container">
         <div class="row row-cols-1 row-cols-md-4">
-            <div class="col mb-4" *ngFor="let item of listaProdutos">
-              <div class="card">
+            <div class="col mb-4" *ngFor="let item of listaProdutos | slice:0:4 ; let i=index ">
+              <div class="card border border-success">
                 <div class="cardImg">
                     <img src="{{item.imag1}}" class="card-img-top innerImg" alt="...">
                 </div>
@@ -30,6 +30,10 @@
               </div>
             </div>
           </div>
-       
+          <div class="justitfy-content-end" *ngIf="listaProdutos.length > 4">
+            <button type="button" class="btn btn-outline-success" [routerLink]='["/pesquisa", this.nome]'>Veja mais...</button>
     </div>
+    </div>
+    
+
 </section>
