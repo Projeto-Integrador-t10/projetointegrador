@@ -6,6 +6,7 @@ import { Categoria } from '../model/Categoria';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CategoriaService {
 
   constructor(private http: HttpClient) { }
@@ -29,7 +30,7 @@ export class CategoriaService {
     return this.http.put<Categoria>('http://localhost:8080/categoria', categoria, this.token)
   }
 
-  deleteCategoria(id: number){
+  deleteCategoria(id: number) {
     return this.http.delete(`http://localhost:8080/categoria/${id}`, this.token)
   }
 }
