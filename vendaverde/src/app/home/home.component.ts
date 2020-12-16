@@ -8,6 +8,8 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  nome:string
   
   produto: Produto = new Produto()
   listaProdutos: Produto[]
@@ -26,5 +28,14 @@ export class HomeComponent implements OnInit {
       this.listaProdutos = resp
       console.log(this.listaProdutos)
     })
+  }
+  findAllByName(){
+    if(this.nome == ""){
+      alert("Preencha a barra antes de pesquisar!")
+    } else{
+      this.produtoService.getByNameProduto(this.nome).subscribe((resp: Produto[])=>{
+        this.listaProdutos = resp
+      })
+    }
   }
 }
