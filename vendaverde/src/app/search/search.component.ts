@@ -11,9 +11,11 @@ import { ProdutoService } from '../service/produto.service';
 export class SearchComponent implements OnInit {
 
   nome:string
+  
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+ 
 
   constructor(
 
@@ -21,7 +23,7 @@ export class SearchComponent implements OnInit {
 
   ) { }
 
-  ngOnInit( ){
+  ngOnInit(){
   }
   
   findAllProdutos() {
@@ -37,7 +39,9 @@ export class SearchComponent implements OnInit {
     } else{
       this.produtoService.getByNameProduto(this.nome).subscribe((resp: Produto[])=>{
         this.listaProdutos = resp
+       
       })
     }
   }
+  
 }

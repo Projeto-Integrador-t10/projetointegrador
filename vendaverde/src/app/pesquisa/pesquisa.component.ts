@@ -21,18 +21,28 @@ export class PesquisaComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit( ){
+  ngOnInit() {
     this.nome = this.route.snapshot.params["nome"]
-    this.findAllByName()
-
+    this.findAllProdutos()
+    this.findByName()
+    
   }
-  findAllByName(){
-    if(this.nome == ""){
+
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+      console.log(this.listaProdutos)
+    })
+  }
+
+
+  findByName() {
+    if (this.nome == "") {
       alert("Preencha a barra antes de pesquisar!")
-    } else{
-      this.produtoService.getByNameProduto(this.nome).subscribe((resp: Produto[])=>{
+    } else {
+      this.produtoService.getByNameProduto(this.nome).subscribe((resp: Produto[]) => {
         this.listaProdutos = resp
-       
+
       })
     }
   }
