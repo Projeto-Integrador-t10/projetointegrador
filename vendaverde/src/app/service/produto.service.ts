@@ -17,6 +17,7 @@ export class ProdutoService {
   }
 
   getAllProdutos(): Observable<Produto[]>{
+
     return this.http.get<Produto[]>('https://oivendaverde.herokuapp.com/produtos', this.token)
   }
 
@@ -41,5 +42,6 @@ export class ProdutoService {
 
   deleteProduto(id: number) {
     return this.http.delete(`https://oivendaverde.herokuapp.com/produtos/${id}`, this.token)
+
   }
 }
