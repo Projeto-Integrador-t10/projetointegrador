@@ -43,7 +43,7 @@
     <div class="form-group my-3">
         <label class="" for="tema">Escolha uma categoria</label>
         <select name="categoria" id='categoria' class="form-control" [(ngModel)]="idCategoria"
-            (change)='findAllCategorias()'>
+            (change)='findByIdCategoria()'>
             <option *ngFor='let item of listaCategorias' value={{item.id}}>
                 {{item.nome}}
             </option>
@@ -60,7 +60,6 @@
 <!-- Listar produtos cadastrados -->
 <div class="container my-5">
     <h2 class="my-5">Produtos Cadastrados</h2>
-
     <div>
         <table class="table table-striped">
             <thead>
@@ -70,10 +69,9 @@
                     <th scope="col">Quantidade</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Categoria</th>
-
                 </tr>
             </thead>
-            <tbody *ngFor='let produto of listaProdutos '>
+            <tbody *ngFor='let produto of listaProdutos'>
                 <tr>
                     <th>{{produto.id}}</th>
                     <td>{{produto.nome}}</td>
@@ -84,9 +82,8 @@
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-outline-success mr-2 mt-1"
                             [routerLink]="['/editar-produto', produto.id]">Editar</button>
-
-                        <button class="btn btn-outline-danger ml-3"
-                            [routerLink]="['/delete-produto', produto.id]">Apagar</button>
+                        <button class="btn btn-outline-danger ml-3 mt-1"
+                            [routerLink]="['/deletar-produto', produto.id]">Apagar</button>
                     </div>
                 </tr>
             </tbody>
@@ -98,7 +95,7 @@
 
 <hr class="my-3">
 
-<div class="container my-5" > <!-- *ngIf='auth.userAdmin()' -->
+<div class="container my-5" >
     <h2 class="my-5">Cadastre uma categoria</h2>
     <div class="form-group">
         <label class="" for="nome">Nome da categoria</label>
@@ -114,18 +111,20 @@
 <hr class="my-3">
 
 <!-- Listar produtos cadastrados -->
-<div class="container my-5">
+<div class="container my-5" >
     <h2 class="my-5">Categorias Cadastradas</h2>
-
     <div>
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th scope="col">id</th>
                     <th scope="col">Nome da categoria</th>
+
                 </tr>
             </thead>
             <tbody *ngFor='let categoria of listaCategorias'>
                 <tr>
+                    <th>{{categoria.id}}</th>
                     <td>{{categoria.nome}}</td>
 
                     <div class="d-flex justify-content-end" ><!-- *ngIf='auth.userAdmin()' -->

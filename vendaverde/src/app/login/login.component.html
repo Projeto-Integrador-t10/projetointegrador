@@ -1,29 +1,34 @@
 <div class="container">
 
-    <div class="row mt-5 mb-5">
-        <div class="col-md-12">
-            <h1 class="text-center">Login</h1>
+    <div class="row mb-5">
+        <div class="col-md-7">
+            <img src="../../assets/img/produto/cafe.jpg" class="img-fluid" style="height:600px;">
         </div>
-    </div>
-    <div class="row mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-            <div>
-                <div class="form-group">
+        <div class="col-md-5">
+
+            <div class="border border-success rounded">
+                <div class="form-group m-3">
+                    <br><br>
+                    <h1 class="text-center">Login</h1>
+                    <br>
                     <label for="exampleInputEmail1">Endereço de email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Seu email" [(ngModel)]='usuarioLogin.usuario'>
                     <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                         ninguém.</small>
                 </div>
-                <div class="form-group">
+                <div class="form-group m-3">
                     <label for="exampleInputPassword1">Senha</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
                         [(ngModel)]='usuarioLogin.senha'>
+                    <br>
+                    <input type="checkbox" aria-label="Checkbox for following text input"><small> Lembre de mim</small>
                 </div>
+                <br><br><br>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-outline-success w-25" (click)='entrar()'>Entrar</button>
                 </div>
-
+                <br>
             </div>
         </div>
     </div>
