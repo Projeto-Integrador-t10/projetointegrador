@@ -9,9 +9,8 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="slideImg d-flex justify-content-center align-items-center">
-                    <img src="../../assets/img/organic.png"
-                        class="d-block w-100 img" alt="...">
+                <div class="slideImg d-flex justify-content-center align-items-center slideImg">
+                    <img src="../../assets/img/organic.png" class="d-block w-100 img" alt="...">
                 </div>
                 <div class="carousel-caption d-flex justify-content-center align-items-start flex-column h-100">
                     <h2 class="display-3 leadTitle text-left">Fortaleça pequenos produtores perto de você!</h2>
@@ -20,9 +19,8 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="slideImg d-flex justify-content-center align-items-center">
-                    <img src="../../assets/img/organic.png"
-                        class="d-block w-100 img" alt="...">
+                <div class="slideImg d-flex justify-content-center align-items-center slideImg">
+                    <img src="../../assets/img/organic.png" class="d-block w-100 img" alt="...">
                 </div>
                 <div class="carousel-caption d-flex justify-content-center align-items-start flex-column h-100">
                     <h2 class="display-3 leadTitle text-left">Dividir o pão de cada dia agora ficou mais fácil</h2>
@@ -30,9 +28,8 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="slideImg d-flex justify-content-center align-items-center">
-                    <img src="../../assets/img/organic.png"
-                        class="d-block w-100 img" alt="...">
+                <div class="slideImg d-flex justify-content-center align-items-center slideImg">
+                    <img src="../../assets/img/organic.png" class="d-block w-100 img" alt="...">
                 </div>
                 <div class="carousel-caption d-flex justify-content-center align-items-start flex-column h-100">
                     <h2 class="display-3 leadTitle text-left">Acreditamos em pequenos esforços diários</h2>
@@ -62,23 +59,23 @@
         </div>
         <div class="row row-cols-1 row-cols-md-4">
             <div class="col mb-4" *ngFor="let item of listaProdutos | slice:0:4 ; let i=index ">
-              <div class="card border">
-                <div class="cardImg">
-                    <img src="{{item.imag1}}" class="card-img-top innerImg" alt="...">
+                <div class="card border">
+                    <div class="cardImg">
+                        <img src="{{item.imag1}}" class="card-img-top innerImg" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nome}}</h5>
+                        <h5 class="card-title">{{item.preco | currency:'BRL'}}</h5>
+                        <button type="button" class="btn btn-success" [routerLink]='["/prod", item.id]'>Ver detalhes do
+                            produto</button>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">{{item.nome}}</h5>
-                  <h5 class="card-title">{{item.preco | currency:'BRL'}}</h5>
-                  <button type="button" class="btn btn-success" [routerLink]='["/prod", item.id]'>Ver detalhes do produto</button>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="justitfy-content-end" *ngIf="listaProdutos.length > 4">
+        </div>
+        <div class="justitfy-content-end" *ngIf="listaProdutos.length > 4">
             <button type="button" class="btn btn-outline-success" [routerLink]='["/pesquisa", this.nome]'>Veja mais...</button>
-
+        </div>
     </div>
-    </div>  
 </section>
 
 <!-- Cards de Produto -->

@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+  nome: string
 
   constructor(
     

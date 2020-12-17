@@ -26,6 +26,8 @@
                 <div class="card-body">
                 <h5 class="card-title text-dark">{{item.nome}}</h5>
                 <h6 class="card-title text-dark">{{item.preco| currency:'BRL'}}</h6>
+                <button type="button" class="btn btn-success" [routerLink]='["/prod", item.id]'>Ver detalhes do
+                    produto</button>
                 </div>
 
               </div>

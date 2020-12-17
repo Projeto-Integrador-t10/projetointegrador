@@ -22,3 +22,12 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+@media(max-width: 768px) {
+    .centerFooterOnSmallDevices {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        text-align: center!important;
+    }
+}

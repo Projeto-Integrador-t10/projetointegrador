@@ -11,3 +11,20 @@ a{
     text-decoration: none;
     text-decoration-color: black;
 }
+
+.slideImg {
+    height: 70vh;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 768px) {
+    .leadTitle {
+        font-size: 2rem;
+    }
+}
