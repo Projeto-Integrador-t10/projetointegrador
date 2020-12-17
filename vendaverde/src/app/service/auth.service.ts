@@ -15,6 +15,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(usuarioLogin: UsuarioLogin) : Observable<UsuarioLogin> {
+
     return this.http.post<UsuarioLogin>('https://oivendaverde.herokuapp.com/usuarios/logar', usuarioLogin)
   }
 

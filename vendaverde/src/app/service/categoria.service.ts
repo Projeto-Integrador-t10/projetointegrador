@@ -15,6 +15,7 @@ export class CategoriaService {
   }
 
   getAllCategorias(): Observable<Categoria[]> {
+
     return this.http.get<Categoria[]>('https://oivendaverde.herokuapp.com/categoria', this.token)
   }  
 
@@ -31,5 +32,6 @@ export class CategoriaService {
 
   deleteCategoria(id: number){
     return this.http.delete(`https://oivendaverde.herokuapp.com/categoria/${id}`, this.token)
+
   }
 }
