@@ -98,7 +98,7 @@
 
 <hr class="my-3">
 
-<div class="container my-5" *ngIf='auth.userAdmin()'>
+<div class="container my-5" > <!-- *ngIf='auth.userAdmin()' -->
     <h2 class="my-5">Cadastre uma categoria</h2>
     <div class="form-group">
         <label class="" for="nome">Nome da categoria</label>
@@ -128,7 +128,7 @@
                 <tr>
                     <td>{{categoria.nome}}</td>
 
-                    <div class="d-flex justify-content-end" *ngIf='auth.userAdmin()'>
+                    <div class="d-flex justify-content-end" ><!-- *ngIf='auth.userAdmin()' -->
 
                         <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', categoria.id]">
                             Editar

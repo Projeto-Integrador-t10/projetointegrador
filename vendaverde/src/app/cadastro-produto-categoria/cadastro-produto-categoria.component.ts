@@ -37,7 +37,6 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
     let id: number = this.route.snapshot.params["id"]
     this.findAllCategorias()
-    this.findByIdCategoria()
     this.findAllProdutos()
   }
 

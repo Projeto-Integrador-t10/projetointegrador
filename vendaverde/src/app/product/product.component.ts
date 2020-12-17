@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { faShower } from '@fortawesome/free-solid-svg-icons';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -18,7 +20,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alert: AlertasService
   ) { }
 
   ngOnInit(){
@@ -30,5 +33,20 @@ export class ProductComponent implements OnInit {
     this.produtoService.getByIdProdutos(idProd).subscribe((resp: any = Produto) => {
       this.produto = resp
     })
+  }
+
+  doar() {
+    this.alert.showAlertSuccess("Doado com sucesso!")
+    this.router.navigate(['/home'])
+  }
+
+  compra() {
+    this.alert.showAlertSuccess("Comprado com sucesso!")
+    this.router.navigate(['/home'])
+  }
+
+  carrinho() {
+    this.alert.showAlertSuccess("Adicionado ao carrinho!")
+    this.router.navigate(['/home'])
   }
 }
