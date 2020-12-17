@@ -43,7 +43,7 @@
     <div class="form-group my-3">
         <label class="" for="tema">Escolha uma categoria</label>
         <select name="categoria" id='categoria' class="form-control" [(ngModel)]="idCategoria"
-            (change)='findAllCategorias()'>
+            (change)='findByIdCategoria()'>
             <option *ngFor='let item of listaCategorias' value={{item.id}}>
                 {{item.nome}}
             </option>
