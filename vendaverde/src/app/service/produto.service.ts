@@ -17,8 +17,7 @@ export class ProdutoService {
   }
 
   getAllProdutos(): Observable<Produto[]>{
-
-    return this.http.get<Produto[]>('https://oivendaverde.herokuapp.com/produtos', this.token)
+    return this.http.get<Produto[]>('https://oivendaverde.herokuapp.com/produtos')
   }
 
   getByIdProduto(id: number): Observable<Produto>{
