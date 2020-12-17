@@ -57,23 +57,19 @@
             <p class="color-font mb-0"><small>Fortaleça os produtores perto de você</small></p>
             <h1 class="">Produtos em destaque</h1>
         </div>
-        <div class="row row-cols-1 row-cols-md-4">
-            <div class="col mb-4" *ngFor="let item of listaProdutos | slice:0:4 ; let i=index ">
+        <div class="row row-cols-1 row-cols-md-4 ">
+            <div class="col mb-4" *ngFor="let item of listaProdutos">
                 <div class="card border">
                     <div class="cardImg">
                         <img src="{{item.imag1}}" class="card-img-top innerImg" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">{{item.nome}}</h5>
+                        <h5 class="card-title t-produto">{{item.nome}}</h5>
                         <h5 class="card-title">{{item.preco | currency:'BRL'}}</h5>
-                        <button type="button" class="btn btn-success" [routerLink]='["/prod", item.id]'>Ver detalhes do
-                            produto</button>
+                        <button type="button" class="btn btn-success" [routerLink]='["/prod", item.id]'>Ver detalhes do produto</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="justitfy-content-end" *ngIf="listaProdutos.length > 3">
-            <button type="button" class="btn btn-outline-success" [routerLink]='["/pesquisa", this.nome]'>Veja mais...</button>
         </div>
     </div>
 </section>

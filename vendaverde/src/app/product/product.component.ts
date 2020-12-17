@@ -37,17 +37,17 @@ export class ProductComponent implements OnInit {
   }
 
   doar(){
-    alert("Doado com sucesso")
+    this.alert.showAlertInfo("Parabéns, doado com sucesso!.")
     this.router.navigate(['/home']) 
   }
   
   compra(){
-    alert("Comprado com sucesso")
+    this.alert.showAlertSuccess("Compra efetuada com sucesso.")
     this.router.navigate(['/home']) 
   } 
 
   carrinho(){
-    alert("Adicionado com sucesso")
+    this.alert.showAlertSuccess("Adicionado com sucesso.")
     this.router.navigate(['/home']) 
   } 
 

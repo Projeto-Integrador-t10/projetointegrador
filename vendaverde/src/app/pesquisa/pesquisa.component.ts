@@ -11,7 +11,6 @@ import { ProdutoService } from '../service/produto.service';
 export class PesquisaComponent implements OnInit {
 
   nome: string
-
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
@@ -23,7 +22,6 @@ export class PesquisaComponent implements OnInit {
 
   ngOnInit() {
     this.nome = this.route.snapshot.params["nome"]
-    this.findAllProdutos()
     this.findByName()
     
   }

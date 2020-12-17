@@ -8,8 +8,10 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
+
 export class SearchComponent implements OnInit {
 
+  esconder: boolean = true
   nome:string
   
 
@@ -39,9 +41,15 @@ export class SearchComponent implements OnInit {
     } else{
       this.produtoService.getByNameProduto(this.nome).subscribe((resp: Produto[])=>{
         this.listaProdutos = resp
+        if(this.listaProdutos.length > 4){
+                  this.esconder = false
+        }else{
+          this.esconder = true
+        }
        
       })
     }
   }
+
   
 }
