@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../model/Produto';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -16,13 +17,15 @@ export class ProductComponent implements OnInit {
   prodId:number
 
   constructor(
-    private router: Router,
-    private route: ActivatedRoute,
     private produtoService: ProdutoService,
-    public alert: AlertasService
+    private router: Router,
+    private alert: AlertasService,
+    private route: ActivatedRoute,
+    public auth: AuthService
   ) { }
 
   ngOnInit(){
+    window.scroll(0,0),
     this.prodId = this.route.snapshot.params["id"],
     this.findByIdProduto(this.prodId)
   }

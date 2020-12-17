@@ -1,6 +1,23 @@
 <div class="container my-5">
 
-    <h2 class="mb-4">Cadastre um produto</h2>
+    <div class="container my-3 px-0"> <!--  *ngIf='auth.userAdmin()' -->
+
+        <h2 class="my-5">Cadastre uma categoria</h2>
+        <div class="form-group">
+            <label class="" for="nome">Nome da categoria</label>
+            <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
+                placeholder="Digite aqui o nome da nova categoria">
+            <div class="form-group d-flex justify-content-end">
+                <button type="button" name="salvar" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
+            </div>
+        </div>
+    
+    </div>
+    
+    <hr class="my-3">
+
+
+    <h2 class="my-5">Cadastre um produto</h2>
 
     <div class="form-group">
         <label class="" for="nome">Nome do produto:</label>
@@ -83,7 +100,7 @@
                         <button class="btn btn-outline-success mr-2 mt-1"
                             [routerLink]="['/editar-produto', produto.id]">Editar</button>
                         <button class="btn btn-outline-danger ml-3 mt-1"
-                            [routerLink]="['/deletar-produto', produto.id]">Apagar</button>
+                            [routerLink]="['/delete-produto', produto.id]">Apagar</button>
                     </div>
                 </tr>
             </tbody>
@@ -96,21 +113,7 @@
 <hr class="my-3">
 
 
-<div class="container my-5"> <!--  *ngIf='auth.userAdmin()' -->
 
-    <h2 class="my-5">Cadastre uma categoria</h2>
-    <div class="form-group">
-        <label class="" for="nome">Nome da categoria</label>
-        <input type="text" class="form-control" id="categoria" [(ngModel)]="categoria.nome"
-            placeholder="Digite aqui o nome da nova categoria">
-        <div class="form-group d-flex justify-content-end">
-            <button type="button" class="btn btn-info my-3" (click)='cadastrar()'>Salvar categoria</button>
-        </div>
-    </div>
-
-</div>
-
-<hr class="my-3">
 
 <!-- Listar produtos cadastrados -->
 <div class="container my-5" >

@@ -28,3 +28,13 @@ a{
         font-size: 2rem;
     }
 }
+
+.cardImg {
+    height: 200px;
+    overflow: hidden;
+}
+
+.innerImg {
+    object-fit: cover;
+    height: 100%;
+}

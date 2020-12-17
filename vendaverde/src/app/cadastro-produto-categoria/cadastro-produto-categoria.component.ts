@@ -48,6 +48,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
         this.categoria = resp
         this.alert.showAlertSuccess('Categoria cadastrado com sucesso!')
         this.findAllCategorias()
+        window.location.reload();
       })
     }
   }
