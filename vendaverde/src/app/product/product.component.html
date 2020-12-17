@@ -1,4 +1,5 @@
 <div class="container my-5 pb-5">
+
   <div class="row m-3">
     <div class="col-md-8">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -31,10 +32,10 @@
     <div class="col-md-4 mt-3">
       <h1>{{produto.nome}}</h1>     
 
-      <h5>{{produto.preco | currency:'BRL'}}</h5>
-      <button class="btn btn-outline-success m-1">comprar</button>
-      <button class="btn btn-outline-success m-1">Adicionar ao carrinho</button>
-      <button class="btn btn-outline-success m-1" [routerLink]="['/doar']">doar</button>
+                  <h5>{{produto.preco | currency:'BRL'}}</h5>
+                  <button class="btn btn-outline-success m-1" (click)='compra()'>comprar</button>
+                  <button class="btn btn-outline-success m-1" (click)='carrinho()'>Adicionar ao carrinho</button>
+                  <button class="btn btn-outline-success m-1" (click)='doar()'>doar</button>
+           </div>
     </div>
-  </div>
 </div>

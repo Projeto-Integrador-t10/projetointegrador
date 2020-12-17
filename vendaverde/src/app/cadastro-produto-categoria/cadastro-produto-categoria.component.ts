@@ -25,7 +25,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
   constructor(
 
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService,   
+    private produtoService: ProdutoService,
     private router: Router,
     private alert: AlertasService,
     private route: ActivatedRoute,
@@ -37,7 +37,6 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
     let id: number = this.route.snapshot.params["id"]
     this.findAllCategorias()
-    this.findByIdCategoria()
     this.findAllProdutos()
   }
 
@@ -67,7 +66,7 @@ export class CadastroProdutoCategoriaComponent implements OnInit {
 
   salvarProduto() {
     this.categoria.id = this.idCategoria
-
+    this.produto.categoria = this.categoria
     if (this.produto.nome == null || this.produto.preco == null || this.produto.quantidade == null || this.produto.estoque == null) {
       this.alert.showAlertInfo("Preencha todos os campos")
     } else {

@@ -6,7 +6,6 @@ import { Categoria } from '../model/Categoria';
 @Injectable({
   providedIn: 'root'
 })
-
 export class CategoriaService {
 
   constructor(private http: HttpClient) { }
@@ -16,21 +15,23 @@ export class CategoriaService {
   }
 
   getAllCategorias(): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>('http://localhost:8080/categoria', this.token)
+
+    return this.http.get<Categoria[]>('https://oivendaverde.herokuapp.com/categoria', this.token)
   }  
 
   getByIdCategoria(id: number): Observable<Categoria> {
-    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`https://oivendaverde.herokuapp.com/categoria/${id}`, this.token)
   }
   postCategoria(categoria: Categoria) : Observable<Categoria>  {
-    return this.http.post<Categoria>('http://localhost:8080/categoria', categoria, this.token)
+    return this.http.post<Categoria>('https://oivendaverde.herokuapp.com/categoria', categoria, this.token)
   }
 
   putCategoria(categoria: Categoria) : Observable<Categoria> {
-    return this.http.put<Categoria>('http://localhost:8080/categoria', categoria, this.token)
+    return this.http.put<Categoria>('https://oivendaverde.herokuapp.com/categoria', categoria, this.token)
   }
 
   deleteCategoria(id: number){
-    return this.http.delete(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.delete(`https://oivendaverde.herokuapp.com/categoria/${id}`, this.token)
+
   }
 }

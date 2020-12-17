@@ -28,7 +28,6 @@ export class CadastroComponent implements OnInit {
     this.senha = event.target.value
 
   }
-  check:true
 
   toggleVisibility(e:any){
     this.usuario.admin = e.target.checked;
