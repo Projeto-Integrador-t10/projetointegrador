@@ -1,7 +1,7 @@
  <h1> VENDAVERDE.COM </h1>  
  
 ![logo-1](https://user-images.githubusercontent.com/52088299/100032314-7a1e7600-2dd6-11eb-925b-e473b3a75868.png)
-https://user-images.githubusercontent.com/52088299/109181498-c0cf9380-776a-11eb-8535-87cc6c993c3e.mp4
+
       - 👯 Equipe: 
 - 🤝 <a href="https://github.com/BarbaraEMCandido"  target="_blank">Bárbara Elizabeth de Moraes Cândido</a>
 - 🤝 <a href="https://github.com/coelhodiana"  target="_blank">Diana Coelho de Souza</a>
@@ -31,3 +31,4 @@ https://user-images.githubusercontent.com/52088299/109181498-c0cf9380-776a-11eb-
 <img src="https://icongr.am/devicon/css3-original-wordmark.svg?size=128&color=currentColor" alt="css3" width="40" height="40"/> 
 <img src="https://icongr.am/devicon/bootstrap-plain.svg?size=128&color=630576" alt="bootstrap" width="40" height="40"/>
 </p>
+<p>https://user-images.githubusercontent.com/52088299/109181498-c0cf9380-776a-11eb-8535-87cc6c993c3e.mp4</p>
